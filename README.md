@@ -180,7 +180,7 @@ O ueceTeX2 é fornecido gratuitamente e sem garantias e pode ser redistribuído 
 
 # Agradecimentos
 
-![alt tag](http://www.goes.uece.br/style/images/logo_goes.png)
+![alt tag](http://larces.uece.br/wp-content/uploads/2019/03/logo5.png)
 
 Grupo de Otimização em Engenharia de Software
 
