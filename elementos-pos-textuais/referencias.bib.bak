@@ -1,0 +1,226 @@
+
+% REFERÊNCIAS TCC VIA BIBTEX
+
+% Redes de computadores e a Internet
+@book{kurose2013,
+	author = {Kurose, James F. and ROSS, Keith W.},
+	title = {Redes de Computadores e a Internet},
+	publisher = {Pearson Education do Brasil},
+	subtitle = {uma abordagem top-down},
+	year = {2013},
+	address = {São Paulo},
+	edition = {6}
+}
+
+% Redes de computadores
+@book{tanenbaum2013,
+	author = {TANENBAUM, Andrew S. and WETHERALL, David},
+	title = {Redes de Computadores},
+	publisher = {Pearson Education do Brasil},
+	year = {2011},
+	address = {São Paulo},
+	edition = {5}
+}
+
+% Comunicações wireless
+@book{haykin2009,
+  title = {Sistemas modernos de comunicações wireless},
+  author = {Haykin, Simon and Moher, Michael},
+  furtherresp = {Tradução de Glayson Eduardo de Figueiredo, José Lucimar do Nascimento},
+  year = {2009},
+  publisher = {Bookman},
+  address = {Porto Alegre}
+}
+
+% Redes sem fio
+@book{moraes2014,
+	author = {MORAES, Alexandre Fernandes {de}},
+	title = {Redes sem Fio},
+	subtitle={Instalação, {C}onfiguração e {S}egurança -- {F}undamentos},
+	publisher = {Érica},
+	year = {2014},
+	address = {São Paulo},
+}
+
+@book{gast2002,
+	author = {Gast Matthew},
+	title = {802.11 {W}ireless {N}etworks: {T}he {D}efinitive {G}uide},
+	publisher = {O'Reilly},
+	year = {2002},
+	pages = {13--33}
+}
+
+@misc{fluminense2010,
+	organization = {UNIVERSIDADE FEDERAL FLUMINENSE. DEPAPARTAMENTO DE ENGENHARIA DE TELECOMUNICAÇÕES},
+	title = {Cartilhas {UCA}},
+	subtitle = {{R}edes sem fio},
+	year = {2010},
+	address = {Rio de Janeiro},
+	publisher = {RNP},
+	volume = {2},
+	note = {Versão 1.0.1}	
+}
+
+% Artigo Site Surey
+@misc{pinheiro2004site,
+	author={PINHEIRO, José M. S}, 
+	title={Site Survey, o Segredo de um Bom Projeto},
+	year={2004},
+	url={http://www.projetoderedes.com.br/artigos/artigo_site_survey.php},
+	urlaccessdate={27 maio 2018}
+}
+
+% Artigos ACM
+@inproceedings{amer2016acm, 
+	author={AMER, Mohammed and BUSSON, Anthony and LASSOUS, Isabelle G.}, 
+	booktitle={Proceedings of the 19th ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWiM '16)}, 
+	title={Association Optimization in Wi-Fi Networks},
+	subtitle={Use of an {A}ccess-based {F}airness}, 
+	year={2016}, 
+	pages={119--126}, 
+	publisher={ACM},
+	address={New York, NY, USA},
+	url = {http://doi.acm.org/10.1145/2988287.2989153},
+	urlaccessdate={27 maio 2018}
+}
+
+@inproceedings{abramson1970acm,
+ 	author = {Norman Abramson},
+ 	title = {The {A}loha {S}ystem: Another {A}lternative for {C}omputer {C}ommunications},
+ 	booktitle = {Proceedings of the November 17-19, 1970, Fall Joint Computer Conference},
+ 	series = {AFIPS '70 (Fall)},
+ 	year = {1970},
+ 	location = {Houston, Texas},
+ 	pages = {281--285},
+ 	numpages = {5},
+ 	url = {http://doi.acm.org/10.1145/1478462.1478502},
+ 	urlaccessdate={16 mar. 2019},
+ 	publisher = {ACM},
+ 	address = {New York, NY, USA}
+}
+
+% Artigos IEEE
+@inproceedings{gorshe2014ieee, 
+	author={Steven Gorshe and Arvind Raghavan and Thomas Starr and Stefano Galli}, 
+	booktitle={Broadband Access: Wireline and Wireless -- Alternatives for Internet Services}, 
+	title={Wi{F}i: {IEEE} 802.11 {W}ireless {LAN}}, 
+	year={2014}, 
+	pages={305--321},
+	publisher={Wiley Telecom},
+	url={https://ieeexplore.ieee.org/document/8044254},
+	urlaccessdate={26 maio 2017}
+}
+
+@ARTICLE{SchwartzAbramson2009ieee, 
+	author = {Mischa Schwartz and Norman Abramson},
+	journal = {IEEE Communications Magazine},
+	title = {The {A}lohanet -- surfing for wireless data [{H}istory of {C}ommunications]},
+	year = {2009},
+	volume = {47},
+	number = {12},
+	pages = {21--25},
+	month = {Dec.},
+	url = {URL: http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=5350363&isnumber=5350354},
+	urlaccessdate={16 mar. 2019}
+}
+
+% Wi-Fi
+@misc{alecrim2008site,
+	author = {Emerson Alecrim}, 
+	title = {O que é {W}i-{F}i ({IEEE} 802.11)?},
+	year = {2008},
+	url = {https://www.infowester.com/wifi.php},
+	urlaccessdate = {11 mar. 2019}
+}
+
+
+
+%================EXEMPLOS===========================%
+@article{costa1998,
+	 author={V. R. Costa},
+	 title={À Margem da lei: o Programa Comunidade Solidária},
+	 journal={Em Pauta},
+	 section={Revista da Faculdade de Serviço Social da UERJ},
+	 address={Rio de Janeiro},
+	 pages={131-148},
+	 number={12},
+	 volume={3},
+	 pages={15-21},
+	 issn={0034-723X},
+	 url={http://www.brazilnet.com.br/contexts/brasilrevistas.htm},
+	 urlaccessdate={28 nov. 2017},
+	 year=1998
+}
+
+@article{lamport1986latex,
+    title={LaTEX: User's Guide \& Reference Manual},
+    author={Lamport, Leslie},
+    year={1986},
+    publisher={Addison-Wesley}
+}
+
+@article{quatroautores,
+	title={Real-time prediction of hand trajectory 
+	by ensembles of cortical neurons in primates},
+	author={Wessberg, Johan and Stambaugh, Christopher R and 
+	Kralik,Jerald D and 
+	Beck, Pamela D and Laubach, Mark and 
+	Chapin, John K and Kim, Jung and Biggs, S James and 
+	Srinivasan, Mandayam A and Nicolelis, Miguel AL},
+	journal={Nature},
+	volume={408},
+	number={6810},
+	pages={361--365},
+	year={2000},
+	publisher={Nature Publishing Group}
+}
+
+@book{knuth,
+	title={The texbook},
+	author={Knuth, D.E. and Bibby, D. and Makai, I.},
+	volume={1993},
+	year={1986},
+	publisher={Addison-Wesley}
+}
+
+@misc{lamport,
+	title={Document Preparation System},
+	author={Lamport, L. and LaTEX, A.},
+	year={1994},
+	publisher={Addison-Wesley}
+}
+
+@MASTERSTHESIS{Maia2011,
+	author = {BORGES, J. A. M.},
+	TITLE = {Estudo da drogadição gestacional e óbito neonatal},
+	SCHOOL = {Universidade Estadual do Ceará, Fortaleza},
+	YEAR = {2012},
+	type = {Mestrado},
+}
+
+@article{mortalidade,
+	title={Mortalidade neonatal: fatores de risco em um município no sul do Brasil},
+	author={MARAM, E. and UCHIMURA, T. T.},
+	journal={Rev. Eletr. Enf.},
+	volume={10},
+	number={1},
+	pages={29-38},
+	year={2008},
+}
+
+@inproceedings{Huetal2000,
+	author = "J. Hu and H.R. Wu and A. Jennings and X. Wang",
+	title = "Fast and robust equalization: A case study",
+	booktitle = "Proceedings of the World Multiconference on Systemics, Cybernetics and Informatics, (SCI 2000), Florida, USA, 23-26 July 2000",
+	publisher = "International Institute of Informatics and Systemics", 
+	address = "FL, USA",
+	pages = "398--403",
+	year = "2000"
+}
+
+@book{tresautores,
+	title={Resiliência: enfatizando a proteção dos 	adolescentes},
+	author={ASSIS, S. G and  AVANCI, J. Q. and PESCE, R. P.},
+	year={2005},
+	address={Porto Alegre: Artmed},
+}

@@ -1,0 +1,128 @@
+% Referências TCC
+@book{kurose2013,
+	author = {Kurose, James F. and ROSS, Keith W.},
+	title = {Redes de Computadores e a Internet},
+	publisher = {Pearson Education do Brasil Ltda},
+	subtitle = {uma abordagem top-down},
+	year = {2013},
+	address = {São Paulo, SP},
+	edition = 6
+}
+
+@book{tanenbaum2013,
+	author = {TANENBAUM, Andrew S. and WETHERALL, David},
+	title = {Redes de Computadores},
+	publisher = {Pearson Education do Brasil Ltda},
+	year = {2011},
+	address = {São Paulo, SP},
+	edition = 5
+}
+
+@book{moraes2014,
+	author = {MORAES, Alexandre Fernandes},
+	title = {Redes sem Fio},
+	subtitle={Instalação, {C}onfiguração e {S}egurança -- {F}undamentos},
+	publisher = {Érica},
+	year = {2014},
+	address = {São Paulo, SP},
+	edition = {}
+}
+
+% Obras sobre metodologia de pesquisa científica
+@book{marconi2017,
+	author = {MARCONI, Marina Andrade and LAKATOS, Eva M.},
+	title = {Fundamentos de metodologia científica},
+	publisher = {Atlas},
+	year = {2017},
+	address = {São Paulo, SP},
+	edition = 8
+}
+
+@book{gil2002,
+	author = {GIL, Antonio C.},
+	title = {Como elaborar projetos de pesquisa},
+	publisher = {Atlas},
+	year = {2002},
+	address = {São Paulo, SP},
+	edition = 4
+}
+
+@book{barbosa2012,
+	author = {BARBOSA, Derly},
+	title = {Manual de Pesquisa},
+	subtitle = {metodologia de estudos e elaboração de monografia},
+	publisher = {Expressão e Arte},
+	year = {2012},
+	address = {São Paulo, SP},
+	edition = 2
+}
+
+@misc{pinheiro2004site,
+	author={PINHEIRO, José M. S}, 
+	title={Site Survey, o Segredo de um Bom Projeto},
+	year={2004},
+	url={http://www.projetoderedes.com.br/artigos/artigo_site_survey.php},
+	urlaccessdate={27 maio 2018}
+}
+
+@article{costa1998,
+	 author={V. R. Costa},
+	 title={À Margem da lei: o Programa Comunidade Solidária},
+	 journal={Em Pauta},
+	 section={Revista da Faculdade de Serviço Social da UERJ},
+	 address={Rio de Janeiro},
+	 pages={131-148},
+	 number=12,
+	 volume=3,
+	 pages={15-21},
+	 issn={0034-723X},
+	 url={http://www.brazilnet.com.br/contexts/brasilrevistas.htm},
+	 urlaccessdate={28 nov. 2018},
+	 year=1998
+}
+
+@misc{cartilhaUCAredessemfio,
+author = {MidiaCom},
+title = {Projeto Um Computador por Aluno},
+subtitle={Redes sem fio},
+institution = {MEC},
+publisher={Escola Superior de Redes RNP},
+year = {2010},
+address={Brasil}
+}
+
+@inproceedings{amer2016acm, 
+	author={AMER, Mohammed and BUSSON, Anthony and LASSOUS, Isabelle G.}, 
+	booktitle={Proceedings of the 19th ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWiM '16)}, 
+	title={Association Optimization in Wi-Fi Networks},
+	subtitle={Use of an {A}ccess-based {F}airness}, 
+	year={2016}, 
+	pages={119--126}, 
+	publisher={ACM},
+	address={New York, NY, USA}
+}
+
+@inproceedings{gorshe2014ieee, 
+	author={Steven Gorshe and Arvind Raghavan and Thomas Starr and Stefano Galli}, 
+	booktitle={Broadband Access: Wireline and Wireless -- Alternatives for Internet Services}, 
+	title={Wi{F}i: {IEEE} 802.11 {W}ireless {LAN}}, 
+	year={2014}, 
+	pages={305--321},  
+	doi={10.1002/9781118878774.ch15}, 
+	publisher={Wiley Telecom},
+	isbn={9781118878774}, 
+	url={https://ieeexplore.ieee.org/document/8044254},
+	urlaccessdate={26 maio 2018}
+}
+
+@article{rodrigues2007site,
+  title={Site survey: mapeamento, detecção de vulnerabilidades e análise de sinal de redes sem fio},
+  author={Rodrigues, William Carlos de J. and Santos,  Ezequiel Ferreira},
+  journal={Exacta},
+  volume={5},
+  number={1},
+  year={2007},
+  pages={69--78},
+  publisher={Universidade Nove de Julho},
+  address={São Paulo}
+}
