@@ -104,7 +104,7 @@
 % Margen da legenda da figura e da tabela
 \captionsetup{
 	justification=centering,	% Centraliza o caption
-	skip=0pt					% Retira o espaco entre a figura/tabela e o caption
+	skip=5pt					% Retira o espaco entre a figura/tabela e o caption
 	%font=small              	
 	%labelfont=bf,				% A palavra 'Figure 1' agora eh negrito
 	%font=bf					% O texto depois de 'Figure 1' agora eh negrito
@@ -1144,7 +1144,15 @@
 %\newcommand{\quadroname}{Quadro}
 %\newcommand{\listofquadrosname}{Lista de Quadros}
 
-\newfloat[chapter]{quadro}{loq}{\cftquadroname}
+\DeclareFloatingEnvironment[
+	fileext=los,
+	listname={Lista de Quadros},
+	name=Quadro,
+	placement=h,
+	within=chapter,
+]{quadro}
+
+%\newfloat[chapter]{quadro}{loq}{\cftquadroname}
 \newlistof{listofquadros}{loq}{\listofquadrosname}
 \newlistentry{quadro}{loq}{0}
 
