@@ -1,4 +1,4 @@
-\chapter{Transmissão em redes sem fio}
+\chapter{Transmissão em Redes sem Fio}
 \label{cap:transmissao-redes-sem-fio}
 
 \section{O Espectro Eletromagnético}
@@ -69,9 +69,9 @@ Sistemas de comunicações sem fio utilizam-se de ondas eletromagnéticas para o
 
 Diferentemente dos enlaces físicos, o caminho de uma onda de rádio entre transmissor e receptor pode variar de uma simples linha de visão completamente desobstruída até um cenário em que seja obstruído por prédios, terrenos elevados e áreas de vegetação densa \cite{rappaport2009}. Isso quer dizer que os sinais de rádio são aleatórios e de difícil análise. Até a velocidade do deslocamento dos terminais influencia na rapidez com que o sinal enfraquece \cite{rappaport2009}.
 
-Portanto, o estudo da propagação dos sinais de radiofrequência é importante para a compreensão das comunicações sem fio porque fornece a modelagem física necessária, o que resulta em uma boa estimativa de potência requerida para o estabelecimento do enlace de comunicação para que haja comunicação confiável \cite{haykin2009}. Além disso, o estudo da propagação auxilia na compreensão das técnicas de recepção para compensação das perdas introduzidas pela transmissão sem fio \cite{haykin2009}.
+Portanto, o estudo da propagação dos sinais de radiofrequência é importante para a compreensão das comunicações sem fio porque fornece a modelagem física necessária, o que resulta em uma boa estimativa de potência requerida para o estabelecimento do enlace de comunicação para que haja comunicação confiável \cite{haykin2008}. Além disso, o estudo da propagação auxilia na compreensão das técnicas de recepção para compensação das perdas introduzidas pela transmissão sem fio \cite{haykin2008}.
 
-Os efeitos sofridos pela onda eletromagnética ao se propagar são diversos, mas os principais e mais importantes são a reflexão, a difração, a refração, a absorção, o desvanecimento e a interferência \cite{flickenger2008,haykin2009,rappaport2009}.
+Os efeitos sofridos pela onda eletromagnética ao se propagar são diversos, mas os principais e mais importantes são a reflexão, a difração, a refração, a absorção, o desvanecimento e a interferência \cite{flickenger2008,haykin2008,rappaport2009}.
 
 \subsection{Absorção}
 \label{sub:absorcao}
@@ -82,25 +82,25 @@ Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou
 	\centering
 	\Caption{\label{fig:absorcao}Atenuação devido a absorção.}	
 	\UECEfig{}{
-		\includegraphics[scale=.78]{figuras/absorcao1.png}
+		\includegraphics[scale=.74]{figuras/absorcao1.png}
 	}{
-		\Fonte{Adaptado de MegaSorber.}
+		\Fonte{Adaptado de \citeonline{megasorber2019c}.}
 	}
 \end{figure}
 
 Para ondas de rádio, os dois principais materiais absorventes são \cite{flickenger2008}:
 
-\begin{alineas}
+\begin{alineascomnumero}
 	\item Metal: elétrons podem mover-se livremente em metais, sendo prontamente capazes de oscilar e absorver a energia de uma onda que incida sobre eles;
 	\item Água: ondas de rádio fazem com que as moléculas de água agitem-se, tomando parte da energia da onda.
-\end{alineas}
+\end{alineascomnumero}
 
 Em termos práticos de redes sem fio, podemos considerar os metais e a água como excelentes absorventes: as ondas de rádio não serão capazes de atravessá-los com facilidade \cite{flickenger2008}.
 
 \subsection{Reflexão}
 \label{sub:reflexao}
 
-Nas comunicações sem fio terrestres, normalmente não existe uma linha de visada desimpedida no percurso do sinal de rádio entre transmissor e receptor e as comunicações geralmente envolvem o fenômeno da reflexão (HAYKIN, 2009).
+Nas comunicações sem fio terrestres, normalmente não existe uma linha de visada desimpedida no percurso do sinal de rádio entre transmissor e receptor e as comunicações geralmente envolvem o fenômeno da reflexão \cite{haykin2008}.
 
 \begin{citacao}
 	A reflexão ocorre quando uma onda eletromagnética em propagação colide com um objeto que possui dimensões muito grandes em comparação com o comprimento de onda da onda que se propaga  \cite{rappaport2009}.
@@ -121,7 +121,7 @@ Nas comunicações sem fio terrestres, normalmente não existe uma linha de visa
 
 Ainda que as regras de reflexão sejam relativamente simples, a situação pode se complicar quando se imagina o interior de um escritório com várias divisórias e objetos metálicos das mais variadas formas e tamanhos. O mesmo se aplica aos ambientes urbanos, já que estes apresentam construções de concreto, árvores, veículos e um intenso fluxo de pessoas circulando pelas ruas.
 
-Nessas áreas densamente ocupadas, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas ao chocarem-se contra a superfície das construções e objetos ao redor \cite{haykin2009}.  Esses percursos de propagação múltiplos são conhecidos como multipercurso ou multicaminho. Até mesmo quando existe uma linha de visão direta, o multipercurso ainda ocorre devido às reflexões no solo e nas estruturas próximas a estação móvel \cite{rappaport2009}.
+Nessas áreas densamente ocupadas, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas ao chocarem-se contra a superfície das construções e objetos ao redor \cite{haykin2008}.  Esses percursos de propagação múltiplos são conhecidos como multipercurso ou multicaminho. Até mesmo quando existe uma linha de visão direta, o multipercurso ainda ocorre devido às reflexões no solo e nas estruturas próximas a estação móvel \cite{rappaport2009}.
 
 \begin{figure}[H]
 	\centering
@@ -129,7 +129,7 @@ Nessas áreas densamente ocupadas, a maior parte da comunicação acontece por e
 	\UECEfig{}{
 		\includegraphics[scale=.8]{figuras/Multipath1.png}
 	}{
-		\Fonte{Adaptado de Yatebts.}
+		\Fonte{Adaptado de \citeonline{yatebts2015}.}
 	}
 \end{figure}
 
@@ -146,7 +146,7 @@ O fenômeno da difração, de maneira sucinta, está relacionado ao fato de as o
 	\centering
 	\Caption{\label{fig:difracao}Difração sobre o topo de uma montanha.}	
 	\UECEfig{}{
-		\includegraphics[scale=.62]{figuras/difracao1.pdf}
+		\includegraphics[scale=.6]{figuras/difracao1.pdf}
 	}{
 		\Fonte{\citeonline[p. ~20]{flickenger2008}.}
 	}
@@ -163,9 +163,9 @@ A refração ocorre quando as ondas eletromagnéticas mudam a trajetória de pro
 	\centering
 	\Caption{\label{fig:refracao}Refração.}	
 	\UECEfig{}{
-		\includegraphics[scale=.65]{figuras/refracao.pdf}
+		\includegraphics[scale=.68]{figuras/refracao.pdf}
 	}{
-		\Fonte{Adaptado de AlunosOnline.}
+		\Fonte{Adaptado de \citeonline{teixeira2019c}.}
 	}
 \end{figure}
 
@@ -182,14 +182,14 @@ Em comunicações sem fio, a interferência é causada principalmente por fontes
 	\UECEfig{}{
 		\includegraphics[scale=.88]{figuras/Interference1.png}
 	}{
-		\Fonte{Adaptado de Yatebts.}
+		\Fonte{Adaptado de \citeonline{yatebts2015}.}
 	}
 \end{figure}
 
 \subsection{Desvanecimento (\textit{fading})}
 \label{sub:desvanecimento}
 
-O desvanecimento é um fenômeno causado pela variabilidade da intensidade do sinal no tempo associado à mobilidade da estação móvel \cite{haykin2009,rappaport2009}. Frequentemente, o sinal recebido é uma combinação de vários modos de propagação, resultantes da reflexão e da difração (detalhados anteriormente). Assim, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas, que chegam de diferentes direções com diferentes atrasos de propagação \cite{haykin2009}. No receptor, o sinal final é a soma vetorial dessas ondas de caminhos múltiplos, podendo interagir umas com as outras construtiva ou destrutivamente, dependendo da amplitude e da fase de cada componente espectral \cite{haykin2009}.
+O desvanecimento é um fenômeno causado pela variabilidade da intensidade do sinal no tempo associado à mobilidade da estação móvel \cite{haykin2008,rappaport2009}. Frequentemente, o sinal recebido é uma combinação de vários modos de propagação, resultantes da reflexão e da difração (detalhados anteriormente). Assim, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas, que chegam de diferentes direções com diferentes atrasos de propagação \cite{haykin2008}. No receptor, o sinal final é a soma vetorial dessas ondas de caminhos múltiplos, podendo interagir umas com as outras construtiva ou destrutivamente, dependendo da amplitude e da fase de cada componente espectral \cite{haykin2008}.
 
 \begin{figure}[H]
 	\centering
@@ -197,16 +197,16 @@ O desvanecimento é um fenômeno causado pela variabilidade da intensidade do si
 	\UECEfig{}{
 		\includegraphics[scale=.4]{figuras/inter.png}
 	}{
-		\Fonte{\citeonline[p. ~57]{haykin2009}}
+		\Fonte{\citeonline[p. ~57]{haykin2008}}
 	}
 \end{figure}
 
-A rapidez com que as flutuações na magnitude do sinal ocorre pode ser classificada como desvanecimento lento ou desvanecimento rápido \cite{haykin2009}:
+A rapidez com que as flutuações na magnitude do sinal ocorre pode ser classificada como desvanecimento lento ou desvanecimento rápido \cite{haykin2008}:
 
 \begin{citacao}
-	Desvanecimento lento surge do fato que a maioria dos grandes refletores e objetos difratores ao longo do percurso de transmissão estão distante do terminal. O movimento do terminal relativamente a esses objetos distantes é pequeno; consequentemente, as mudanças correspondentes na propagação são sentidas muito lentamente, Esses fatores contribuem para as perdas do percurso médio entre um transmissor fixo e um receptor fixo \cite{haykin2009}.
+	Desvanecimento lento surge do fato que a maioria dos grandes refletores e objetos difratores ao longo do percurso de transmissão estão distante do terminal. O movimento do terminal relativamente a esses objetos distantes é pequeno; consequentemente, as mudanças correspondentes na propagação são sentidas muito lentamente, Esses fatores contribuem para as perdas do percurso médio entre um transmissor fixo e um receptor fixo \cite{haykin2008}.
 	
-	Desvanecimento rápida surge da variação rápida dos níveis de sinal quando o terminal usuário move-se em distâncias curtas. O desvanecimento rápido é causado por reflexões de objetos e pelo movimento do terminal relativamente a esses objetos \cite{haykin2009}.
+	Desvanecimento rápida surge da variação rápida dos níveis de sinal quando o terminal usuário move-se em distâncias curtas. O desvanecimento rápido é causado por reflexões de objetos e pelo movimento do terminal relativamente a esses objetos \cite{haykin2008}.
 \end{citacao}
 
 \section{Modelos de Propagação}
@@ -223,7 +223,7 @@ Existem diversos modelos de propagação formulados por estudiosos e organizaç�
 
 O modelo de propagação no espaço livre é usado para prever a intensidade do sinal recebido quando o transmissor e o receptor possuem um linha de visão sem a presença de obstáculos, ou seja, quando há caminho livre entre eles \cite{rappaport2009}. Os sistemas de comunicação via satélite normalmente experimentam uma transmissão com caminho desobstruído.
 
-O modelo de espaço livre, assim como a maioria dos modelos de propagação de radiofrequência, prevê que a potência recebida diminui em função da distância de separação transmissor-receptor (T--R) \cite{rappaport2009}. A potência no espaço livre recebida por uma antena receptora que está separada de uma antena transmissora, irradiando, por uma distância T--R é dada pela equação do espaço livre:
+O modelo de espaço livre, assim como a maioria dos modelos de propagação de radiofrequência, prevê que a potência recebida diminui em função da distância de separação transmissor-receptor (T-R) \cite{rappaport2009}. A potência no espaço livre recebida por uma antena receptora que está separada de uma antena transmissora, irradiando, por uma distância T-R é dada pela equação do espaço livre:
 
 \begin{equation}
 	\begin{aligned}
@@ -232,9 +232,9 @@ O modelo de espaço livre, assim como a maioria dos modelos de propagação de r
 	\end{aligned}
 \end{equation}
 
-\noindent onde $P_T$ é a potência transmitida, $P_R$ E a potência recebida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora e $L_P$ é a perda do percurso entre T--R. Tanto a dedução matemática do ganho ($G$) da antena quanto a da \emph{perda do percurso} ($L_P$) pode ser encontrada com detalhes em \citeonline{haykin2009}.
+\noindent onde $P_T$ é a potência transmitida, $P_R$ E a potência recebida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora e $L_P$ é a perda do percurso entre T-R. Tanto a dedução matemática do ganho ($G$) da antena quanto a da \emph{perda do percurso} ($L_P$) pode ser encontrada com detalhes em \citeonline{haykin2008}.
 
-A equação \ref{eq:friis} é conhecida como \emph{equação de Friis}. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2009}:
+A equação \ref{eq:friis} é conhecida como \emph{equação de Friis}. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2008}:
 
 \begin{equation}
 	\begin{aligned}
@@ -243,7 +243,7 @@ A equação \ref{eq:friis} é conhecida como \emph{equação de Friis}. É poss�
 	\end{aligned}
 \end{equation}
 
-\noindent onde $X(dB) = 10\log_{10} (X)$. A \emph{equação de Friis} é a equação fundamental para o planejamento do enlace de rádio, pois relaciona as potências transmitida e recebida, considerando as condições da transmissão \cite{haykin2009}. Ela fornece os requisitos essenciais para que o nível de potência requerida pelo receptor seja suficiente para ele detectar as informações transmitidas com confiabilidade \cite{haykin2009}.
+\noindent onde $X(dB) = 10\log_{10} (X)$. A \emph{equação de Friis} é a equação fundamental para o planejamento do enlace de rádio, pois relaciona as potências transmitida e recebida, considerando as condições da transmissão \cite{haykin2008}. Ela fornece os requisitos essenciais para que o nível de potência requerida pelo receptor seja suficiente para ele detectar as informações transmitidas com confiabilidade \cite{haykin2008}.
 
 \subsection{Modelo de dois raios}
 \label{modelo-2-raios}
@@ -256,7 +256,9 @@ O modelo de reflexão no solo (Figura \ref{fig:2raios}), baseado na ótica geom�
 	\centering
 	\Caption{\label{fig:2raios}Modelo de reflexão no solo com dois raios.}	
 	\UECEfig{}{
+		\fbox{\begin{varwidth}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
 		\includegraphics[scale=.8]{figuras/modelo2raios.pdf}
+		\end{varwidth}}
 	}{
 		\Fonte{Adaptado de \citeonline[p. ~80]{rappaport2009}}
 	}
@@ -271,4 +273,60 @@ A potência recebida a uma distância $d$ do transmissor para o modelo de dois r
 	\end{aligned}
 \end{equation}
 
-\noindent onde $P_R$ é a potência recebida, $P_T$ é a potência transmitida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora, $h_T$ é a altura do transmissor e $h_R$ é a altura do receptor. Todo o desenvolvimento algébrico até chegar a Equação \ref{eq:2-raios} pode ser encontrada em \citeonline{rappaport2009} ou \citeonline{haykin2009}.
+\noindent onde $P_R$ é a potência recebida, $P_T$ é a potência transmitida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora, $h_T$ é a altura do transmissor e $h_R$ é a altura do receptor. Todo o desenvolvimento algébrico até chegar a Equação \ref{eq:2-raios} pode ser encontrada em \citeonline{rappaport2009} ou \citeonline{haykin2008}.
+
+\subsection{Modelo log-distância (log simplificado)}
+\label{sub:log-distancia}
+
+Os modelos de propagação baseados em medições em campo indicam que que a potência média do sinal recebida cai logaritmicamente com a distância, seja em enlaces de rádio para ambientes \textit{indoor} ou \textit{outdoor} \cite{rappaport2009}. A perda de percurso média para a uma separação T-R qualquer é obtida em função da distância usando um expoente de perda de caminho, $n$, dada por
+
+\begin{equation}
+	\begin{aligned}
+	\label{eq:log-distancia}
+		PL(d) \propto \left(\dfrac{d}{d_0}\right)^n
+	\end{aligned}
+\end{equation}
+
+\noindent ou
+
+\begin{equation}
+	\begin{aligned}
+	\label{eq:log-distancia-2}
+		PL(dB) = PL(d_0) + 10n\log_{10}\left(\dfrac{d}{d_0}\right)^n
+	\end{aligned}
+\end{equation}
+
+\noindent onde $PL$ é a perda média do percurso, $n$ é o expoente de perda de caminho (indica a velocidade com a qual essa perda aumenta com relação a distância), $d_0$ é a distância de referência próxima que é determinada pelas medições perto do transmissor, e $d$ é a distância de separação T-R.
+
+\subsection{Modelo de Okumura--Hata}
+\label{sub:okumura-hata}
+
+A melhor aplicação do modelo de Okumura-Hata acontece na faixa de frequência existente entre 150 MHz e 1 GHz, podendo ser estendido até 1,5 GHz \cite{haykin2008,rappaport2009}. Os dados originais foram medidos por Okumura (entre outros) em diversos locais do Japão. Algum tempo depois, Hata forneceu a equação para predição da perda de propagação em área urbana, juntamente com outras equações de correção para aplicações em área suburbana e aberta.
+
+As perdas do percurso, em dB, para esses três tipos de meios, respectivamente, são dadas pelas equações
+\begin{equation}
+\begin{split}
+	\label{eq:okumura-hata}
+		L_P & = A + B\log_{10}r \\
+		L_P & = A + B\log_{10}r - C \\
+		L_P & = A + B\log_{10}r - D
+\end{split}
+\end{equation}
+
+\noindent onde $r$ é o alcance em quilômetros, os parâmetros $A$, $B$, $C$ e $D$ dependem da frequência de operação ($f_c$), da altura da estação transmissora ($h_b$) e da altura da estação receptora ($h_m$). As fórmulas que permitem-nos determinar os valores de $A$, $B$, $C$ e $D$ encontram-se na literatura \cite{haykin2008}.
+
+\subsection{Modelo Multi--Wall--and--Floor}
+\label{sub:modelo-MWF}
+
+O modelo \emph{Multi-Wall-and-Floor} (MWF) leva em consideração a perda decrescente de penetração de paredes/pisos da mesma categoria, à medida que o número de paredes/pisos atravessados aumenta, isto é, defende que a relação entre as  perdas não segue uma linearidade lógica \cite{lott2001ieee}. Por exemplo, dada uma perda de penetração de 2 dB em uma parede de concreto, essa mesma onda, ao penetrar em outra parede de mesma característica, não sofrerá uma atenuação de 2 dB como ocorrido no primeiro obstáculo.
+
+O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente para a análise dos efeitos da propagação em ambientes fechados (\textit{indoor}), pois esses locais concentram grande variedade de divisórias construídas com diferentes materiais. A perda sofrida por uma onda de rádio ao propagar-se por múltiplas paredes/pisos, $L_{MWF}$, pode ser dada pela seguinte equação:
+
+\begin{equation}
+	\begin{aligned}
+	\label{eq:mwf}
+		L_{MWF} = L_0 + 10n\log_{10}(d) + \sum_{i=1}^{I} \sum_{k=1}^{K_{wi}} L_{wik} + \sum_{j=1}^{J} \sum_{k=1}^{K_{fj}} L_{fjk}
+	\end{aligned}
+\end{equation}
+
+\noindent onde $L_0$ é a perda de trajetória a uma distância de 1 m, $n$ é o fator de perda do percurso, $d$ é a distância entre o transmissor e o receptor, $L_{wik}$ é a atenuação devido ao tipo de parede $i$ e à $k$-ésima parede atravessada, $L_{fjk}$ é a atenuação devida ao tipo de piso $j$ e ao $k$-ésimo piso atravessado, $I$ é o número de tipos de parede, $J$ é o número de tipos de piso, $K_{wi}$ é o número de paredes atravessadas do tipo $i$ e $K_{fj}$ é o número de paredes atravessadas do tipo $j$.

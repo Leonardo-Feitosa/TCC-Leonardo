@@ -204,10 +204,10 @@
 % Espaco entre o caption e o algoritmo
 %\SetAlCapSkip{\onelineskip}
 
-% Distance between floats on the top or the bottom and the text;
+% Distância entre os flutuadores na parte superior ou inferior e o texto.
 \setlength{\textfloatsep}{18pt plus 2pt minus 2pt}
 
-% Distance between floats inserted inside the page text (using h) and the text proper.
+% Distância entre os carros alegóricos inseridos no texto da página (usando h) e o texto adequado.
 \setlength{\intextsep}{18pt plus 2pt minus 2pt}
 
 \newcommand{\Caption}[1]{ %
@@ -216,9 +216,10 @@
    	\end{Spacing} %
 }
 
+% Define as configurações do comando Fonte nas imagens e tabelas.
 \newcommand{\Fonte}[2][\fontename]{ %
-%	\vspace{-3pt}
-	\vspace{8pt}
+	\vspace{2pt}
+%	\vspace{8pt}
  		\fonte[\normalfont{#1}]{\normalfont{#2}}
  	\vspace{-5pt}
 }
