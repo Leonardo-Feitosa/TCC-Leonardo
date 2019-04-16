@@ -9,13 +9,11 @@ Quando se movem, os elétrons criam ondas eletromagnéticas que podem se propaga
 A velocidade de uma onda qualquer depende do meio em que ela se propaga. No vácuo, todas as ondas eletromagnéticas viajam na mesma velocidade, a da luz, que é aproximadamente igual a $3 \times 10^8$ m/s, independentemente de sua frequência \cite{tanenbaum2011}.
 
 Essas três grandezas -- frequência ($f$), comprimento de onda ($\lambda$) e velocidade ($c$) -- se relacionam (no vácuo) através da seguinte expressão:
-
 \begin{equation}
 	\begin{aligned}
 		c = \lambda f
 	\end{aligned}
 \end{equation}
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:onda}Propriedades de uma onda.}	
@@ -35,7 +33,6 @@ A largura de banda adquiriu uma conotação de ser uma medida da capacidade de d
 O uso de uma faixa de frequência é rigorosamente controlado pelas autoridades reguladoras através de processos de licenciamento. No âmbito mundial, o processo de padronização de alocação de frequências para uso específico é realizado pela União Internacional de Telecomunicações (ITU, do inglês, \textit{International Telecommunication Union}). No Brasil, a ANATEL (Agência Nacional de Telecomunicações) representa a entidade responsável pela definição e fiscalização da utilização das faixas de frequência em território nacional. Essas determinações regulatórias visam coibir o uso das faixas de frequência sem permissão por infratores como estações de rádio e TVs piratas.
 
 Entretanto, existem faixas de frequência que não estão sujeitas a autorização de uso pelos órgãos reguladores, ou seja, são bandas de frequência abertas para transmitir. Essas frequências não licenciadas são conhecidas como ISM (do inglês, \textit{Industrial, Scientific, Medical}). As bandas ISM foram padronizadas na maioria dos países em três faixas de frequência: 900 MHz, 2,4 GHz e 5 GHz \cite{moraes2010,tanenbaum2011}. A figura abaixo exibe a alocação das frequências ISM e também das bandas U-NII (do inglês, \textit{Unlicensed National Information Infrastructure}).
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:ism_unii}As bandas ISM e U-NII.}	
@@ -47,7 +44,6 @@ Entretanto, existem faixas de frequência que não estão sujeitas a autorizaç�
 \end{figure}
 
 Cada banda de frequência utilizada nas telecomunicações estão contidas em um modelo de escala comum, onde é apresentado o intervalo completo de todas as possíveis frequências da radiação eletromagnética, denominado de espectro eletromagnético. A figura abaixo ilustra todas as variações de frequências contidas no espectro eletromagnético.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:espectro}O espectro eletromagnético e a maneira como ele é usado na comunicação.}	
@@ -76,8 +72,7 @@ Os efeitos sofridos pela onda eletromagnética ao se propagar são diversos, mas
 \subsection{Absorção}
 \label{sub:absorcao}
 
-Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou dissipam-se totalmente. O quanto elas perdem de potência irá depender de sua frequência e, claro, do material em que penetram \cite{flickenger2008}. Em analogia, janelas de vidro são, obviamente, transparentes para a luz, enquanto o vidro usado em óculos de sol filtram uma boa quantidade da intensidade da luz e também da radiação ultravioleta. 
-
+Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou dissipam-se totalmente. O quanto elas perdem de potência irá depender de sua frequência e, claro, do material em que penetram \cite{flickenger2008}. Em analogia, janelas de vidro são, obviamente, transparentes para a luz, enquanto o vidro usado em óculos de sol filtram uma boa quantidade da intensidade da luz e também da radiação ultravioleta.
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:absorcao}Atenuação devido a absorção.}	
@@ -117,12 +112,11 @@ Nas comunicações sem fio terrestres, normalmente não existe uma linha de visa
 \end{figure}
 
 \subsubsection{Multipercurso}
-\label{subsub:multipercurso}
+\label{subsec:multipercurso}
 
 Ainda que as regras de reflexão sejam relativamente simples, a situação pode se complicar quando se imagina o interior de um escritório com várias divisórias e objetos metálicos das mais variadas formas e tamanhos. O mesmo se aplica aos ambientes urbanos, já que estes apresentam construções de concreto, árvores, veículos e um intenso fluxo de pessoas circulando pelas ruas.
 
 Nessas áreas densamente ocupadas, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas ao chocarem-se contra a superfície das construções e objetos ao redor \cite{haykin2008}.  Esses percursos de propagação múltiplos são conhecidos como multipercurso ou multicaminho. Até mesmo quando existe uma linha de visão direta, o multipercurso ainda ocorre devido às reflexões no solo e nas estruturas próximas a estação móvel \cite{rappaport2009}.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:multipath}Sinais refletidos.}	
@@ -141,7 +135,6 @@ Nessas áreas densamente ocupadas, a maior parte da comunicação acontece por e
 \end{citacao}
 
 O fenômeno da difração, de maneira sucinta, está relacionado ao fato de as ondas eletromagnéticas contornarem objetos quando passam ao redor dos mesmos, tais como arestas de construções ou picos de montanhas ou quando atravessam barreiras contendo aberturas. Para altas frequências, a difração, assim como a reflexão, depende do formato do objeto, além da amplitude, fase e polarização da onda incidente sobre o ponto difrator \cite{rappaport2009}.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:difracao}Difração sobre o topo de uma montanha.}	
@@ -158,7 +151,6 @@ Vale ressaltar que a difração ocorre ao custo de perda de potência, isto é, 
 \label{sub:refracao}
 
 A refração ocorre quando as ondas eletromagnéticas mudam a trajetória de propagação quando passam de um meio para outro. Na transição, o nível de energia da onda é reduzido, pois uma fração da onda é refletida \cite{flickenger2008}. Um exemplo de refração ocorre quando a luz, propagando-se no ar, encontra uma interface com a água. A utilização da refração nas comunicações sem fio fica limitada a circunstâncias especiais, tais como comunicações via satélite, pois a transmissão necessita penetrar através das camadas da atmosfera, cada uma com densidade distinta da outra \cite{rappaport2009}.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:refracao}Refração.}	
@@ -175,7 +167,6 @@ A refração ocorre quando as ondas eletromagnéticas mudam a trajetória de pro
 Interferência é o fenômeno que corrompe um sinal enquanto ele viaja em um enlace da origem para o destino. A perturbação pode interromper, obstruir, degradar ou limitar a recepção efetiva de sinais. Esses efeitos podem variar de uma simples degradação de dados a uma perda total de dados. O termo é frequentemente usado para se referir à adição de sinais indesejados a um sinal útil \cite{flickenger2008}.
 
 Em comunicações sem fio, a interferência é causada principalmente por fontes de radiofrequência que operam na mesma faixa de frequência, como por exemplo, aparelho de microondas e redes Wi-Fi, ambas operando na banda de 2,4 GHz \cite{moraes2010}.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:interferencia}Interferência de radiofrequência.}	
@@ -190,7 +181,6 @@ Em comunicações sem fio, a interferência é causada principalmente por fontes
 \label{sub:desvanecimento}
 
 O desvanecimento é um fenômeno causado pela variabilidade da intensidade do sinal no tempo associado à mobilidade da estação móvel \cite{haykin2008,rappaport2009}. Frequentemente, o sinal recebido é uma combinação de vários modos de propagação, resultantes da reflexão e da difração (detalhados anteriormente). Assim, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas, que chegam de diferentes direções com diferentes atrasos de propagação \cite{haykin2008}. No receptor, o sinal final é a soma vetorial dessas ondas de caminhos múltiplos, podendo interagir umas com as outras construtiva ou destrutivamente, dependendo da amplitude e da fase de cada componente espectral \cite{haykin2008}.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:fading}Interferência construtiva e destrutiva.}	
@@ -224,7 +214,6 @@ Existem diversos modelos de propagação formulados por estudiosos e organizaç�
 O modelo de propagação no espaço livre é usado para prever a intensidade do sinal recebido quando o transmissor e o receptor possuem um linha de visão sem a presença de obstáculos, ou seja, quando há caminho livre entre eles \cite{rappaport2009}. Os sistemas de comunicação via satélite normalmente experimentam uma transmissão com caminho desobstruído.
 
 O modelo de espaço livre, assim como a maioria dos modelos de propagação de radiofrequência, prevê que a potência recebida diminui em função da distância de separação transmissor-receptor (T-R) \cite{rappaport2009}. A potência no espaço livre recebida por uma antena receptora que está separada de uma antena transmissora, irradiando, por uma distância T-R é dada pela equação do espaço livre:
-
 \begin{equation}
 	\begin{aligned}
 	\label{eq:friis}
@@ -235,7 +224,6 @@ O modelo de espaço livre, assim como a maioria dos modelos de propagação de r
 \noindent onde $P_T$ é a potência transmitida, $P_R$ E a potência recebida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora e $L_P$ é a perda do percurso entre T-R. Tanto a dedução matemática do ganho ($G$) da antena quanto a da \emph{perda do percurso} ($L_P$) pode ser encontrada com detalhes em \citeonline{haykin2008}.
 
 A equação \ref{eq:friis} é conhecida como \emph{equação de Friis}. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2008}:
-
 \begin{equation}
 	\begin{aligned}
 	\label{eq:friis-decibel}
@@ -246,12 +234,11 @@ A equação \ref{eq:friis} é conhecida como \emph{equação de Friis}. É poss�
 \noindent onde $X(dB) = 10\log_{10} (X)$. A \emph{equação de Friis} é a equação fundamental para o planejamento do enlace de rádio, pois relaciona as potências transmitida e recebida, considerando as condições da transmissão \cite{haykin2008}. Ela fornece os requisitos essenciais para que o nível de potência requerida pelo receptor seja suficiente para ele detectar as informações transmitidas com confiabilidade \cite{haykin2008}.
 
 \subsection{Modelo de dois raios}
-\label{modelo-2-raios}
+\label{sub:modelo-2-raios}
 
 A equação do espaço livre (Equação \ref{eq:friis}) considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna, o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
 
 O modelo de reflexão no solo (Figura \ref{fig:2raios}), baseado na ótica geométrica, considera o caminho direto e um caminho de propagação refletido no solo entre o transmissor e o receptor \cite{rappaport2009}.
-
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:2raios}Modelo de reflexão no solo com dois raios.}	
@@ -265,7 +252,6 @@ O modelo de reflexão no solo (Figura \ref{fig:2raios}), baseado na ótica geom�
 \end{figure}
 
 A potência recebida a uma distância $d$ do transmissor para o modelo de dois raios pode ser expressa como \cite{rappaport2009}:
-
 \begin{equation}
 	\begin{aligned}
 	\label{eq:2-raios}
@@ -279,7 +265,6 @@ A potência recebida a uma distância $d$ do transmissor para o modelo de dois r
 \label{sub:log-distancia}
 
 Os modelos de propagação baseados em medições em campo indicam que que a potência média do sinal recebida cai logaritmicamente com a distância, seja em enlaces de rádio para ambientes \textit{indoor} ou \textit{outdoor} \cite{rappaport2009}. A perda de percurso média para a uma separação T-R qualquer é obtida em função da distância usando um expoente de perda de caminho, $n$, dada por
-
 \begin{equation}
 	\begin{aligned}
 	\label{eq:log-distancia}
@@ -321,7 +306,6 @@ As perdas do percurso, em dB, para esses três tipos de meios, respectivamente, 
 O modelo \emph{Multi-Wall-and-Floor} (MWF) leva em consideração a perda decrescente de penetração de paredes/pisos da mesma categoria, à medida que o número de paredes/pisos atravessados aumenta, isto é, defende que a relação entre as  perdas não segue uma linearidade lógica \cite{lott2001ieee}. Por exemplo, dada uma perda de penetração de 2 dB em uma parede de concreto, essa mesma onda, ao penetrar em outra parede de mesma característica, não sofrerá uma atenuação de 2 dB como ocorrido no primeiro obstáculo.
 
 O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente para a análise dos efeitos da propagação em ambientes fechados (\textit{indoor}), pois esses locais concentram grande variedade de divisórias construídas com diferentes materiais. A perda sofrida por uma onda de rádio ao propagar-se por múltiplas paredes/pisos, $L_{MWF}$, pode ser dada pela seguinte equação:
-
 \begin{equation}
 	\begin{aligned}
 	\label{eq:mwf}
