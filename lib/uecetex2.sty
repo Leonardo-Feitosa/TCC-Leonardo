@@ -79,7 +79,7 @@
 \setafterparaskip{\onelineskip}
 
 % Define a distância da margem esquerda do parágrafo
-\setlength{\parindent}{1.3cm}%{2cm}
+\setlength{\parindent}{1.25cm}%{2cm}
 
 % Estilo do chapter 1
 \renewcommand{\ABNTEXchapterfont}{\bfseries}
@@ -550,7 +550,7 @@
 \newcommand{\preambulotccgraduacao}{
 	%Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, 
 	%como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
-	Trabalho de Conclusão de Curso (TCC) apresentado ao curso de \imprimirgraduacaoem\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará -- IFCE -- Campus \imprimircampus\, como requisito parcial para obtenção do título de Tecnólogo em Telemática. \\
+	Trabalho de Conclusão de Curso (TCC) apresentado ao curso de \imprimirgraduacaoem\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará -- IFCE -- \textit{Campus} \imprimircampus\, como requisito parcial para obtenção do título de Tecnólogo em Telemática. \\
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -653,15 +653,15 @@
         \includegraphics[scale=0.4]{lib/Marca_IFCE_Vertical.PNG} \\
         \vspace{0.1cm}
 		\MakeUppercase{\imprimiries} \\
-		\MakeUppercase{\imprimiriessigla\ Campus\ \imprimircampus} \\
-		\MakeUppercase{Curso de #1 em #2} \\
+		\MakeUppercase{\imprimiriessigla\ \textit{Campus}\ \imprimircampus} \\
+		\MakeUppercase{#1 em #2} \\
 
-		\vspace{3\onelineskip} % cada comando \onelineskip insere o espaço de um "Enter"
+		\vspace{5\onelineskip} % cada comando \onelineskip insere o espaço de um "Enter"
 		%\vspace{3cm}
 		
 		\MakeUppercase{\imprimirautor}
 		
-		\vspace{12\onelineskip}
+		\vspace{10\onelineskip}
 		%\vspace{4.5cm}
 		
 		\MakeUppercase{\imprimirtitulo}
@@ -699,11 +699,11 @@
 
 	\begin{center}
 		\normalsize\MakeUppercase\imprimirautor\par
-		\vspace{12\onelineskip}\par % \vspace{5.5cm}
+		\vspace{7\onelineskip}\par % \vspace{5.5cm}
 		\normalsize\MakeUppercase\imprimirtitulo
 	\end{center}
 	
-	\vspace{8\onelineskip}
+	\vspace{7\onelineskip}
 	
 	%Retira o espaço do parágrafo
 	\hspace*{-1.3cm}
@@ -733,7 +733,7 @@
 %%         Folha de Aprovação          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Define o comprimento da linha das assinaturas na Folha de Aprovacao
+% Define o comprimento da linha das assinaturas na Folha de Aprovação
 \setlength{\ABNTEXsignwidth}{12cm}
 
 % Largura da linha da assinatura
@@ -1424,7 +1424,7 @@
 	}{} % else
 }
 
-% Remove uppercase do apendice e anexos
+% Remove upper do apendice e anexos
 \makeatletter
 \ifthenelse{\boolean{ABNTEXsumario-abnt-6027-2012}}{
 	\settocpreprocessor{chapter}{%
@@ -1517,11 +1517,11 @@
 \setlength{\cftbeforechapterskip}{0pt}
 
 %\renewcommand\cftchapterfont{\normalsize}
-\renewcommand\cftsectionfont{\normalsize\normalfont}
-\renewcommand\cftsubsectionfont{\normalsize}
-\renewcommand\cftsubsubsectionfont{\normalsize\normalfont}
+\renewcommand\cftsectionfont{\normalfont}
+\renewcommand\cftsubsectionfont{\normalfont}
+\renewcommand\cftsubsubsectionfont{\normalfont}
 % Altera a fonte da seção quinária
-\renewcommand*{\cftparagraphfont}{\normalsize\normalfont\itshape}
+\renewcommand*{\cftparagraphfont}{\normalsize\normalfont}
 
 % Páginas do sumário não podem ser negrito.
 \renewcommand\cftchapterpagefont{\normalfont}

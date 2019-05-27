@@ -1,14 +1,19 @@
 \chapter{Transmissão em Redes sem Fio}
 \label{cap:transmissao-redes-sem-fio}
 
+As ondas de rádio são fáceis de gerar, podem percorrer longas distâncias e penetrar facilmente em diversos materiais, por isso, são amplamente utilizadas para comunicação, seja em ambientes fechados, seja em locais abertos. As ondas de rádio também são omnidirecionais, o que significa que elas se propagam em todas as direções a partir da origem. Desse modo, o transmissor e o receptor não precisam estar cuidadosamente alinhados para que haja comunicação \cite{tanenbaum2011}. Por todas essas características, as ondas de rádio são o principal recurso para que a comunicação sem fio se tornasse possível, resultando em uma dispersão generalizada pelo globo.
+
 \section{O Espectro Eletromagnético}
 \label{sec:espectro-eletromagnetico}
 
-Quando se movem, os elétrons criam ondas eletromagnéticas que podem se propagar pelo espaço livre (até mesmo no vácuo), transportando energia durante o percurso. Essas ondas foram previstas pelo físico inglês James Clerk Maxwell em 1865 e foram observadas pela primeira vez pelo físico alemão Heinrich Hertz em 1887 \cite{tanenbaum2011}. O número de ciclos (oscilações) por segundo de uma onda eletromagnética é chamado frequência, e é medido em Hertz (Hz) -- em homenagem a Heinrich Hertz. A distância entre dois pontos máximos (ou mínimos) consecutivos é chamada comprimento de onda, designada universalmente pela letra grega $\lambda$ (lambda).
+Quando se movem, os elétrons criam ondas eletromagnéticas que podem se propagar pelo espaço livre (até mesmo no vácuo), transportando energia durante o percurso. Essas ondas foram previstas pelo físico inglês James Clerk Maxwell em 1865 e foram observadas pela primeira vez pelo físico alemão Heinrich Hertz em 1887 \cite{tanenbaum2011}.
+
+O número de ondas completas que passam por um ponto fixo dentro de um período de tempo é chamado de frequência, e é medido em Hertz (Hz, em homenagem a Heinrich Hertz). A distância entre dois pontos máximos (ou mínimos) consecutivos é chamada comprimento de onda, designada universalmente pela letra grega $\lambda$ (lambda). A Figura \ref{fig:onda} ilustra essa propriedade das ondas.
 
 A velocidade de uma onda qualquer depende do meio em que ela se propaga. No vácuo, todas as ondas eletromagnéticas viajam na mesma velocidade, a da luz, que é aproximadamente igual a $3 \times 10^8$ m/s, independentemente de sua frequência \cite{tanenbaum2011}.
 
 Essas três grandezas -- frequência ($f$), comprimento de onda ($\lambda$) e velocidade ($c$) -- se relacionam (no vácuo) através da seguinte expressão:
+
 \begin{equation}
 	\begin{aligned}
 		c = \lambda f
@@ -18,7 +23,7 @@ Essas três grandezas -- frequência ($f$), comprimento de onda ($\lambda$) e ve
 	\centering
 	\Caption{\label{fig:onda}Propriedades de uma onda.}	
 	\UECEfig{}{
-		\includegraphics[scale=.4]{figuras/onda0.pdf}
+		\includegraphics[scale=.4]{figuras/onda_wave.pdf}
 	}{
 		\Fonte{\citeonline[p. ~10]{flickenger2008}.}
 	}	
@@ -37,7 +42,7 @@ Entretanto, existem faixas de frequência que não estão sujeitas a autorizaç�
 	\centering
 	\Caption{\label{fig:ism_unii}As bandas ISM e U-NII.}	
 	\UECEfig{}{
-		\includegraphics[scale=.6]{figuras/ism-unii.pdf}
+		\includegraphics[scale=.62]{figuras/ism-unii.pdf}
 	}{
 		\Fonte{\citeonline[p. ~66]{tanenbaum2011}.}
 	}	
@@ -236,16 +241,16 @@ A equação \ref{eq:friis} é conhecida como \emph{equação de Friis}. É poss�
 \subsection{Modelo de dois raios}
 \label{sub:modelo-2-raios}
 
-A equação do espaço livre (Equação \ref{eq:friis}) considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna, o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
+A equação do espaço livre (Equação \ref{eq:friis}) considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
 
-O modelo de reflexão no solo (Figura \ref{fig:2raios}), baseado na ótica geométrica, considera o caminho direto e um caminho de propagação refletido no solo entre o transmissor e o receptor \cite{rappaport2009}.
+O modelo de reflexão no solo, baseado na ótica geométrica, considera o caminho direto e um caminho de propagação refletido no solo entre o transmissor e o receptor, como ilustra a Figura \ref{fig:2raios} \cite{rappaport2009}.
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:2raios}Modelo de reflexão no solo com dois raios.}	
 	\UECEfig{}{
-		\fbox{\begin{varwidth}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
-		\includegraphics[scale=.8]{figuras/modelo2raios.pdf}
-		\end{varwidth}}
+		%\fbox{\begin{varwidth}{\dimexpr\textwidth-2\fboxsep-2\fboxrule\relax}
+		\includegraphics[scale=.4]{figuras/modelo2raios.pdf}
+		%\end{varwidth}}
 	}{
 		\Fonte{Adaptado de \citeonline[p. ~80]{rappaport2009}}
 	}
@@ -305,11 +310,11 @@ As perdas do percurso, em dB, para esses três tipos de meios, respectivamente, 
 
 O modelo \emph{Multi-Wall-and-Floor} (MWF) leva em consideração a perda decrescente de penetração de paredes/pisos da mesma categoria, à medida que o número de paredes/pisos atravessados aumenta, isto é, defende que a relação entre as  perdas não segue uma linearidade lógica \cite{lott2001ieee}. Por exemplo, dada uma perda de penetração de 2 dB em uma parede de concreto, essa mesma onda, ao penetrar em outra parede de mesma característica, não sofrerá uma atenuação de 2 dB como ocorrido no primeiro obstáculo.
 
-O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente para a análise dos efeitos da propagação em ambientes fechados (\textit{indoor}), pois esses locais concentram grande variedade de divisórias construídas com diferentes materiais. A perda sofrida por uma onda de rádio ao propagar-se por múltiplas paredes/pisos, $L_{MWF}$, pode ser dada pela seguinte equação:
+O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente para a análise dos efeitos da propagação em ambientes fechados (\textit{indoor}), pois esses locais concentram grande variedade de divisórias construídas com diferentes materiais. A perda sofrida por uma onda de rádio ao atravessar múltiplas paredes/pisos, $L_{P}$, pode ser dada pela seguinte equação:
 \begin{equation}
 	\begin{aligned}
 	\label{eq:mwf}
-		L_{MWF} = L_0 + 10n\log_{10}(d) + \sum_{i=1}^{I} \sum_{k=1}^{K_{wi}} L_{wik} + \sum_{j=1}^{J} \sum_{k=1}^{K_{fj}} L_{fjk}
+		L_{P} = L_0 + 10n\log_{10}(d) + \sum_{i=1}^{I} \sum_{k=1}^{K_{wi}} L_{wik} + \sum_{j=1}^{J} \sum_{k=1}^{K_{fj}} L_{fjk}
 	\end{aligned}
 \end{equation}
 

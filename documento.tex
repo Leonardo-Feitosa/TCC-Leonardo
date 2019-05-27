@@ -101,18 +101,18 @@
 % Exemplo: \dataaprovacao{01 de Janeiro de 2012}
 \dataaprovacao{}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%     Informação sobre o Orientador       %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     Informação sobre o Orientador(a)      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \orientador{Prof. Dr. Francisco Rafael Vasconcelos Guimarães}
 \orientadories{Instituto Federal de Educação, Ciência e Tecnologia do Ceará -- IFCE}
 \orientadorcentro{}
 \orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%      Informação sobre o Co-orientador   %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Informação sobre o Coorientador(a)   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Deixe o nome do coorientador em branco para remover do documento
 
@@ -121,9 +121,9 @@
 \coorientadorcentro{}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%      Informação sobre a banca           %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Informação sobre a banca             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Atenção! Deixe o nome do membro da banca para remover da folha de aprovacao
 
@@ -165,7 +165,7 @@
 	\imprimirabstract{elementos-pre-textuais/abstract}
 	\imprimirlistadeilustracoes
 	\imprimirlistadetabelas
-	\imprimirlistadequadros
+	%\imprimirlistadequadros
 	\imprimirlistadealgoritmos
 	\imprimirlistadecodigosfonte
 	\imprimirlistadeabreviaturasesiglas	
@@ -174,13 +174,16 @@
 	
 	% Elementos textuais
 	\textual
-	\input{elementos-textuais/introducao}
+	% Arquivos de Exemplo
+	\input{elementos-textuais/introducao_exemplo}
 	\input{elementos-textuais/fundamentacao-teorica}
-	\input{elementos-textuais/cap02-efeitos-propagacao-OE}
 	\input{elementos-textuais/trabalhos-relacionados}
 	\input{elementos-textuais/metodologia}
 	\input{elementos-textuais/resultados}
 	\input{elementos-textuais/conclusao}
+	% Meu TCC
+	\input{elementos-textuais/cap01-introducao}
+	\input{elementos-textuais/cap02-efeitos-propagacao-OE}
 	
 	% Elementos pós-textuais
 	
