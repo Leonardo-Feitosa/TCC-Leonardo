@@ -125,7 +125,7 @@
 %%      Informação sobre a banca             %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Atenção! Deixe o nome do membro da banca para remover da folha de aprovacao
+% Atenção! Deixe o nome do membro da banca em branco para remover da folha de aprovacao
 
 % Exemplo de uso:
 % \membrodabancadois{Prof. Dr. Fulano de Tal}
@@ -166,9 +166,9 @@
 	\imprimirlistadeilustracoes
 	\imprimirlistadetabelas
 	%\imprimirlistadequadros
-	\imprimirlistadealgoritmos
-	\imprimirlistadecodigosfonte
-	\imprimirlistadeabreviaturasesiglas	
+	%\imprimirlistadealgoritmos
+	%\imprimirlistadecodigosfonte
+	\imprimirlistadeabreviaturasesiglas{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
 	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}   
 	\imprimirsumario
 	
@@ -181,6 +181,7 @@
 	\input{elementos-textuais/metodologia}
 	\input{elementos-textuais/resultados}
 	\input{elementos-textuais/conclusao}
+	
 	% Meu TCC
 	\input{elementos-textuais/cap01-introducao}
 	\input{elementos-textuais/cap02-efeitos-propagacao-OE}
@@ -196,6 +197,7 @@
 %que não funciona, \nocite{referencia-especifica} funciona. Você pode
 %acrescentar ao seu documento um comando \nocite para cada referência
 %desejada.
+	% Caso utilze o TeXstudio não é necessário seguir as etapas anteriores.
 	\bibliography{elementos-pos-textuais/referencias}
 	
 	

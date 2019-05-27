@@ -26,7 +26,7 @@
 
 % Se você quer ver as margens do documento no PDF, descomente essa linha
 % As linhas das margens serao impressas
-%\usepackage[showframe, pass]{geometry}
+\usepackage[showframe, pass]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%             Definições              %%
@@ -34,7 +34,8 @@
 
 % Importa o arquivo com as entradas do glassario
 \input{elementos-pos-textuais/glossario}
-\input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
+%\input{elementos-pre-textuais/lista-de-abreviaturas-e-siglas}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%       Formatação das Páginas        %%
@@ -79,7 +80,7 @@
 \setafterparaskip{\onelineskip}
 
 % Define a distância da margem esquerda do parágrafo
-\setlength{\parindent}{1.25cm}%{2cm}
+\setlength{\parindent}{1.3cm}%{2cm}
 
 % Estilo do chapter 1
 \renewcommand{\ABNTEXchapterfont}{\bfseries}
@@ -1302,9 +1303,14 @@
 % Largura da lista de abreviaturas
 \setlength{\glsdescwidth}{\linewidth}
 
-\newcommand{\imprimirlistadeabreviaturasesiglas}{ %
-	\printglossary[type=\acronymtype,style=long,nonumberlist,title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}] %
-	\pagebreak %
+%\newcommand{\imprimirlistadeabreviaturasesiglas}{ %
+%	\printglossary[type=\acronymtype,style=long,nonumberlist,title={Lista de Abreviaturas e Siglas\vspace{-0.3cm}}] %
+%	\pagebreak %
+%}
+
+\newcommand{\imprimirlistadeabreviaturasesiglas}[1]{
+	\input{#1}
+	% \listadesiglasname\pagebreak%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
