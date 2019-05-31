@@ -65,6 +65,21 @@ Entretanto, existem faixas de frequência que não estão sujeitas a autorizaç�
 	}	
 \end{figure}
 
+\subsection{Canais}
+\label{subsec:canais}
+
+Como pode ser visto na \autoref{fig:ism_unii}, a faixa de frequência de 2.4 GHz aloca 83,5 MHz do espectro eletromagnético. Porém, por questões de otimização, essa banda foi segmentada para que mais redes pudessem sem implantadas no mesmo intervalo de frequências.  Assim, o espectro de 2.4 GHz é dividido em fatias uniformemente distribuídos dentro da banda, denominado de canais \cite{flickenger2008}. Cada canal tem a largura de 22 MHz, mas estão separados por apenas 5 MHz. Isto significa que existe intersecção entre canais adjacentes, podendo interferir um com o outro. Isto está representado visualmente na \autoref{fig:canais}. Ainda na \autoref{fig:canais}, é possível observar que os únicos canais em que não há sobreposição são os canais 1, 6 e 11.
+
+\begin{figure}[H]
+	\centering
+	\Caption{\label{fig:canais}Canais e frequências centrais para a banda de 2.4 GHz.}	
+	\UECEfig{}{
+		\includegraphics[scale=.38]{figuras/canais_wifi.pdf}
+	}{
+		\Fonte{\citeonline[p. ~15]{flickenger2008}.}
+	}	
+\end{figure}
+
 \section{Efeitos de Propagação em Ondas Eletromagnéticas}
 \label{sec:efeitos-propagacao-OE}
 
