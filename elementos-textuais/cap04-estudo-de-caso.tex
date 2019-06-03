@@ -46,7 +46,7 @@ As configurações que podem ser encontradas nos pontos de acesso variam de equi
 \section{Softwares utilizados}
 \label{sec:softwares-utiliados}
 
-Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de software(s) dedicado(s) que permita(m) capturar as informações necessárias que possibilitarão avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper).
+Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitarão avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper).
 
 Como descrito na capítulo 3, com Xirrus Wi-Fi Inspector, é fácil encontrar redes \textit{wireless} disponíveis, sendo totalmente gratuito. Além disso, a página principal dele exibe quatros campos diferentes que podem ser expandidos para uma visualização mais detalhada: \textit{Radar}, \textit{History}, \textit{Connection} e \textit{Networks}. Cada um possui algumas funções específicas, mas para a proposta deste trabalho, apenas o campo \textit{Networks} foi explorado, já esta janela exibe as informações detalhadas das redes detectadas em determinada área (\autoref{fig:software-xirrus}).
 
@@ -83,7 +83,7 @@ O programa possibilita ao usuário escolher um arquivo de seu computador que rep
 	\centering
 	\Caption{\label{fig:software-ekahau}Geração do mapa de calor no Ekahau HeatMapper.}	
 	\UECEfig{}{
-		\includegraphics[scale=.55]{figuras/heatmapper-700x374.jpg}
+		\includegraphics[scale=.5]{figuras/heatmapper-700x374.jpg}
 	}{
 		\Fonte{\cite{Ekahau2019}.}
 	}	
@@ -175,7 +175,7 @@ No Ekahau HeatMapper foi carregada a imagem da planta baixa do Bloco Didático. 
 
 As primeiras medições ocorreram nos ambientes do tipo \textit{indoor} do Bloco Didático, o que inclui salas e laboratórios. Após a coleta dos níveis do sinal da rede de toda a parte interna, foi feita a captura na parte externa, como os corredores e locais sociais frequentados pelos estudantes. Em todo o prédio foram primeiramente analisados o segundo andar, e posteriormente o primeiro.
 
-Para que todos os valores de medição obtidos na coleta fossem os mais precisos possível, foi feita uma comparação entre o ponto da planta baixa no Ekahau HeatMapper e o local da área real. Com isso, toda vez que um ponto de medida foi gerado, se obteve as potências de todas as redes Wi-Fi que estavam ao alcance do notebook.
+Para que todos os valores de medição obtidos na coleta fossem os mais precisos possível, foi feita uma comparação entre o ponto da planta baixa no Ekahau HeatMapper e o local da área real. Com isso, toda vez que um ponto de medida foi gerado, se obteve as potências de todas as redes Wi-Fi que estavam ao alcance do \textit{notebook}.
 
 As medições ocorreram em 18 de maio de 2019 (sábado), pelo fato de que nesta data todos os docentes e discentes estariam ausentes do \textit{campus}. Isso contribuiu para que todas as salas e áreas que o Bloco Didático dispõe fossem visitadas e mapeadas.
 
@@ -246,4 +246,4 @@ A \autoref{fig:escala-sinal} demonstra a barra de potência do Ekahau HeatMapper
 	}	
 \end{figure}
 
-Para que os mapas fossem gerados foram definidos valores de potência baseados em testes de distância entre um ponto de acesso e o notebook, no qual --85dBm (ou menor) representa uma área de sombra, isto é, sem propagação suficiente de sinal, e no mapa aparecerá a tonalidade mais forte de vermelho. Isso significa que toda área do mapa que receber esse nível de sinal será considerada de perda de conectividade. Caso a potência recebida no mapa for de --45dBm (ou maior, caso o receptor seja capaz de detectá-la), isto significa que o local mapeado possui alta conectividade, sendo assim representada pela cor verde.
+Para que os mapas fossem gerados foram definidos valores de potência baseados em testes de distância entre um ponto de acesso e o \textit{notebook}, no qual --85dBm (ou menor) representa uma área de sombra, isto é, sem propagação suficiente de sinal, e no mapa aparecerá a tonalidade mais forte de vermelho. Isso significa que toda área do mapa que receber esse nível de sinal será considerada de perda de conectividade. Caso a potência recebida no mapa for de --45dBm (ou maior, caso o receptor seja capaz de detectá-la), isto significa que o local mapeado possui alta conectividade, sendo assim representada pela cor verde.
