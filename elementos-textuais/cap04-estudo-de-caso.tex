@@ -185,7 +185,7 @@ A \autoref{fig:pontos-andar2} mostra os 62 pontos marcados no segundo andar do B
 	\centering
 	\Caption{\label{fig:pontos-andar2}Pontos de medida no 2º andar do Bloco Didático.}	
 	\UECEfig{}{
-		\includegraphics[scale=.24,angle=90]{figuras/Pontos_Medidos_Andar02.pdf}
+		\includegraphics[scale=.2]{figuras/Pontos_Medidos_Andar02.pdf}
 	}{
 		\Fonte{Autor.}%
 	}	
@@ -195,7 +195,7 @@ A \autoref{fig:pontos-andar2} mostra os 62 pontos marcados no segundo andar do B
 	\centering
 	\Caption{\label{fig:pontos-andar1}Pontos de medida no 1º andar do Bloco Didático.}	
 	\UECEfig{}{
-		\includegraphics[scale=.37,angle=90]{figuras/Pontos_Medidos_Andar01.pdf}
+		\includegraphics[scale=.25]{figuras/Pontos_Medidos_Andar01.pdf}
 	}{
 		\Fonte{Autor.}%
 	}	
@@ -247,3 +247,40 @@ A \autoref{fig:escala-sinal} demonstra a barra de potência do Ekahau HeatMapper
 \end{figure}
 
 Para que os mapas fossem gerados foram definidos valores de potência baseados em testes de distância entre um ponto de acesso e o \textit{notebook}, no qual --85dBm (ou menor) representa uma área de sombra, isto é, sem propagação suficiente de sinal, e no mapa aparecerá a tonalidade mais forte de vermelho. Isso significa que toda área do mapa que receber esse nível de sinal será considerada de perda de conectividade. Caso a potência recebida no mapa for de --45dBm (ou maior, caso o receptor seja capaz de detectá-la), isto significa que o local mapeado possui alta conectividade, sendo assim representada pela cor verde.
+
+\section{Resultados do Site Survey}
+\label{resultados-site-survey}
+
+Com a ferramenta de software Ekahau HeatMapper foram gerados dois mapas de calor, ambas da rede Wi-Fi do Bloco Didático, o que inclui os dois pontos de acesso instalados no local. A seguir são demonstrados os resultados obtidos através da aplicação da metodologia de \textit{site survey} realizado na área já mencionada.
+
+Por questões de autorização, apenas na rede destinada aos discentes (SSID IFCE\_Teste) foram feitos os mapas de calor. Pelo fato do ponto de acesso atribuído aos docentes (SSID IFCE\_PROFESSORES) estar localizado próximo ao dos estudantes na sala de coordenação, os mapas de calor resultantes de ambas provavelmente seriam equivalentes, ou seja,  com o mapeamento de apenas uma das redes o mesmo resultado se aplicaria a outra com margem de erro desprezível para caso de verificação da propagação de radiofrequência.
+
+A \autoref{fig:heatmapper-andar2} apresenta visualmente o mapa de calor da rede IFCE\_Teste para o segundo andar do Bloco Didático, e o maior nível de potência que é recebido é representado por verde e o menor nível de potência recebido é definido pela cor vermelha. Cada pequeno ponto\footnote[6]{Por algum motivo, o programa Ekahau HeatMapper não exibiu certos pontos medidos. No entanto, não houve prejuízos significativos ao resultado final do mapeamento.} verde interligado a outro por um segmento de reta representa o local onde foi efetuada uma medição de sinal.
+
+\begin{figure}[H]
+	\centering
+	\Caption{\label{fig:heatmapper-andar2}Mapa de calor da rede IFCE\_Teste para o 2º andar do Bloco Didático.}	
+	\UECEfig{}{
+		\includegraphics[scale=.52,angle=90]{figuras/heatmapper_2_andar.png}
+	}{
+		\Fonte{Autor.}%
+	}	
+\end{figure}
+
+Como se pode observar pela área do mapa de calor da \autoref{fig:heatmapper-andar2}, as regiões que apresentaram maiores níveis de intensidade de sinal de rádio favoráveis para uma conexão foram as áreas localizados nas imediações do centro da planta baixa, destacadas pelos tons de verde, e também pelas partições adjacentes a sala de coordenação.
+
+Nota-se que os sinais propagados pelo pelo segundo andar sofrem algumas atenuações como por exemplo nos extremos direito e esquerdo do mapa em que a coloração alaranjada simboliza locais com considerável perda de potência. Levando em consideração, pelo mapa, que as áreas mais afetadas pela perda de conectividade são as salas de aula e os corredores, frequentadas diariamente por estudantes, é indispensável a implantação de novos pontos de acesso para suprir esses locais onde o sinal perde força.
+
+A \autoref{fig:heatmapper-andar1} representa o mapa de propagação de sinal do segundo andar do Bloco Didático para a rede IFCE\_Teste. A partir do mapa de calor gerado com as devidas colorações, nota-se que a rede mapeada não dispõe de uma área de cobertura que abrange todo o espaço do andar. Como é possível perceber, na maior parte do mapa as áreas apresentam tons de cor mais ``quentes'', o que significa que o ambiente não recebe bons níveis de potência de rádio para o estabelecimento de uma conexão de dados confiável. No depósito não foram realizadas medições pelo fato de o local ser usado simplesmente para armazenamento de materiais.
+
+Logo, para que a rede IFCE\_Teste tenha uma cobertura de sinal por todo o primeiro andar, seria necessário futuramente acrescentar mais equipamentos de acesso que irradiem sinais que alcancem as zonas com deficiência de propagação de rádio.
+
+\begin{figure}[H]
+	\centering
+	\Caption{\label{fig:heatmapper-andar1}Mapa de calor da rede IFCE\_Teste para o 1º andar do Bloco Didático.}	
+	\UECEfig{}{
+		\includegraphics[scale=.62,angle=90]{figuras/heatmapper_Terreo_Editada.png}
+	}{
+		\Fonte{Autor.}%
+	}	
+\end{figure}
