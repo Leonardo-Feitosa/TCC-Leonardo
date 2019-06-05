@@ -19,6 +19,9 @@ Essas três grandezas -- frequência ($f$), comprimento de onda ($\lambda$) e ve
 		c = \lambda f
 	\end{aligned}
 \end{equation}
+
+\textcolor{blue}{Desta forma, pode-se observar que as propriedades de uma onda eletromagnética dependem de sua frequência (ou comprimento de onda), já que a velocidade da luz é uma constante.}
+
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:onda}Propriedades de uma onda.}	
@@ -53,7 +56,7 @@ Cada banda de frequência utilizada nas telecomunicações estão contidas em um
 
 O uso de uma faixa de frequência é rigorosamente controlado pelas autoridades reguladoras através de processos de licenciamento. No âmbito mundial, o processo de padronização de alocação de frequências para uso específico é realizado pela União Internacional de Telecomunicações (ITU, do inglês, \textit{International Telecommunication Union}). No Brasil, a ANATEL (Agência Nacional de Telecomunicações) representa a entidade responsável pela definição e fiscalização da utilização das faixas de frequência em território nacional. Essas determinações regulatórias visam coibir o uso das faixas de frequência sem permissão por infratores como estações de rádio e TVs piratas.
 
-Entretanto, existem faixas de frequência que não estão sujeitas a autorização de uso pelos órgãos reguladores, ou seja, são bandas de frequência abertas para transmitir. Essas frequências não licenciadas são conhecidas como ISM (do inglês, \textit{Industrial, Scientific, Medical}). As bandas ISM foram padronizadas na maioria dos países em três faixas de frequência: 900 MHz, 2,4 GHz e 5 GHz \cite{moraes2010,tanenbaum2011}. A \autoref{fig:ism_unii} exibe a alocação das frequências ISM e também das bandas U-NII (do inglês, \textit{Unlicensed National Information Infrastructure}).
+Entretanto, existem faixas de frequência que não estão sujeitas a autorização de uso pelos órgãos reguladores, ou seja, são bandas de frequência abertas para transmitir. Essas frequências não licenciadas são conhecidas como ISM (do inglês, \textit{Industrial, Scientific, Medical}). As bandas ISM foram padronizadas na maioria dos países em três faixas de frequência: 900 MHz, 2.4 GHz e 5 GHz \cite{moraes2010,tanenbaum2011}. A \autoref{fig:ism_unii} exibe a alocação das frequências ISM e também das bandas U-NII (do inglês, \textit{Unlicensed National Information Infrastructure}).
 
 \begin{figure}[H]
 	\centering
@@ -62,21 +65,6 @@ Entretanto, existem faixas de frequência que não estão sujeitas a autorizaç�
 		\includegraphics[scale=.64]{figuras/ism-unii.pdf}
 	}{
 		\Fonte{\citeonline[p. ~66]{tanenbaum2011}.}
-	}	
-\end{figure}
-
-\subsection{Canais}
-\label{subsec:canais}
-
-Como pode ser visto na \autoref{fig:ism_unii}, a faixa de frequência de 2.4 GHz aloca 83,5 MHz do espectro eletromagnético. Porém, por questões de otimização, essa banda foi segmentada para que mais redes pudessem sem implantadas no mesmo intervalo de frequências.  Assim, o espectro de 2.4 GHz é dividido em fatias uniformemente distribuídos dentro da banda, denominado de canais \cite{flickenger2008}. Cada canal tem a largura de 22 MHz, mas estão separados por apenas 5 MHz. Isto significa que existe intersecção entre canais adjacentes, podendo interferir um com o outro. Isto está representado visualmente na \autoref{fig:canais}. Ainda na \autoref{fig:canais}, é possível observar que os únicos canais em que não há sobreposição são os canais 1, 6 e 11.
-
-\begin{figure}[H]
-	\centering
-	\Caption{\label{fig:canais}Canais e frequências centrais para a banda de 2.4 GHz.}	
-	\UECEfig{}{
-		\includegraphics[scale=.36]{figuras/canais_wifi.pdf}
-	}{
-		\Fonte{\citeonline[p. ~15]{flickenger2008}.}
 	}	
 \end{figure}
 
@@ -129,6 +117,7 @@ Nas comunicações sem fio terrestres, normalmente não existe uma linha de visa
 		\includegraphics[scale=.72]{figuras/reflexao.pdf}
 	}{
 		\Fonte{\citeonline[p. ~18]{flickenger2008}.}%
+		\Nota{\textcolor{blue}{O ângulo de incidência ($\theta_i$) é igual ao ângulo de reflexão ($\theta_r$).}}%
 	}
 \end{figure}
 
@@ -186,14 +175,14 @@ A refração ocorre quando as ondas eletromagnéticas mudam a trajetória de pro
 
 Interferência é o fenômeno que corrompe um sinal enquanto ele viaja em um enlace da origem para o destino. A perturbação pode interromper, obstruir, degradar ou limitar a recepção efetiva de sinais. Esses efeitos podem variar de uma simples degradação de dados a uma perda total de dados. O termo é frequentemente usado para se referir à adição de sinais indesejados a um sinal útil \cite{flickenger2008}.
 
-Em comunicações sem fio, a interferência é causada principalmente por fontes de radiofrequência que operam na mesma faixa de frequência, como por exemplo, o aparelho de microondas e as redes 802.11 (detalhadas no capítulo 3), ambas operando na banda de 2,4 GHz \cite{moraes2010}. A \autoref{fig:interferencia} mostra um exemplo de interferência entre ondas de rádio.
+Em comunicações sem fio, a interferência é causada principalmente por fontes de radiofrequência que operam na mesma faixa de frequência, como por exemplo, o aparelho de microondas e as redes 802.11 (detalhadas no capítulo 3), ambas operando na banda de 2.4 GHz \cite{moraes2010}. A \autoref{fig:interferencia} mostra um exemplo de interferência entre ondas de rádio.
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:interferencia}Interferência entre ondas de rádio.}	
 	\UECEfig{}{
-		\includegraphics[scale=.88]{figuras/Interference1.png}
+		\includegraphics[scale=.15]{figuras/interferenciaSVG_pdf.pdf}
 	}{
-		\Fonte{Adaptado de \citeonline{yatebts2015}.}
+		\Fonte{Adaptado de \citeonline{physics2015}.}
 	}
 \end{figure}
 
@@ -206,7 +195,7 @@ O desvanecimento é um fenômeno causado pela variabilidade da intensidade do si
 	\centering
 	\Caption{\label{fig:fading}Interferência construtiva e destrutiva.}	
 	\UECEfig{}{
-		\includegraphics[scale=.3]{figuras/inter.png}
+		\includegraphics[scale=.35]{figuras/inter.png}
 	}{
 		\Fonte{\citeonline[p. ~57]{haykin2008}}
 	}
@@ -253,7 +242,7 @@ O modelo de espaço livre, assim como a maioria dos modelos de propagação de r
 
 \noindent onde $P_T$ é a potência transmitida, $P_R$ E a potência recebida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora e $L_P$ é a perda do percurso entre T-R. Tanto a dedução matemática do ganho da antena ($G$) quanto a da perda do percurso ($L_P$) pode ser encontrada com detalhes em \citeonline{haykin2008}.
 
-A \autoref{eq:friis} é conhecida como equação de Friis. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2008}:
+A \textcolor{blue}{Eq. \eqref{eq:friis}} é conhecida como equação de Friis. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2008}:
 \begin{equation}
 	\begin{aligned}
 	\label{eq:friis-decibel}
@@ -266,7 +255,7 @@ A \autoref{eq:friis} é conhecida como equação de Friis. É possível simplifi
 \subsection{Modelo de dois raios}
 \label{sub:modelo-2-raios}
 
-A equação do espaço livre (\autoref{eq:friis}) considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
+A equação do espaço livre \textcolor{blue}{(Eq. \eqref{eq:friis})} considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
 
 O modelo de reflexão no solo, baseado na ótica geométrica, considera o caminho direto e um caminho de propagação refletido no solo entre o transmissor e o receptor, como ilustra a \autoref{fig:2raios} \cite{rappaport2009}.
 
@@ -290,7 +279,7 @@ A potência recebida a uma distância $d$ do transmissor para o modelo de dois r
 	\end{aligned}
 \end{equation}
 
-\noindent onde $P_R$ é a potência recebida, $P_T$ é a potência transmitida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora, $h_T$ é a altura do transmissor e $h_R$ é a altura do receptor. Todo o desenvolvimento algébrico até chegar a \autoref{eq:2-raios} pode ser encontrada em \citeonline{rappaport2009} ou \citeonline{haykin2008}.
+\noindent onde $h_T$ é a altura do transmissor e $h_R$ é a altura do receptor. Todo o desenvolvimento algébrico até chegar a \textcolor{blue}{Eq. \eqref{eq:2-raios}} pode ser encontrada em \citeonline{rappaport2009} ou \citeonline{haykin2008}.
 
 \subsection{Modelo log-distância (log simplificado)}
 \label{sub:log-distancia}
@@ -357,7 +346,7 @@ As perdas do percurso, em dB, para esses três tipos de meios, respectivamente, 
 \end{split}
 \end{equation}
 
-\noindent onde $r$ é o alcance em quilômetros, os parâmetros $A$, $B$, $C$ e $D$ dependem da frequência de operação ($f_c$), da altura da estação transmissora ($h_T$) e da altura da estação receptora ($h_R$). As fórmulas que permitem-nos determinar os valores de $A$, $B$, $C$ e $D$ encontram-se na literatura \cite{haykin2008}.
+\noindent onde $r$ é o alcance em quilômetros, os parâmetros $A$, $B$, $C$ e $D$\footnote[2]{\textcolor{blue}{As equações que permitem determinar os valores de $A$, $B$, $C$ e $D$ fogem ao escopo deste trabalho e, por isso, podem ser encontrados na literatura em \citeonline{haykin2008}.}} dependem da frequência de operação ($f_c$), da altura da estação transmissora ($h_T$) e da altura da estação receptora ($h_R$).
 
 \subsection{Modelo Multi--Wall--and--Floor}
 \label{sub:modelo-MWF}

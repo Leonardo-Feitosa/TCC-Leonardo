@@ -12,9 +12,9 @@ Usuários móveis precisam transferir dados para seus dispositivos sem depender 
 
 As LANs sem fio são muito populares atualmente, especialmente nas residências, escritórios, instituições acadêmicas e outros lugares onde a instalação de cabos é muito trabalhosa ou inviável física e/ou financeiramente. Embora muitas tecnologias e padrões para LANs sem fio tenham sido desenvolvidos na década de 1990, uma classe particular de padrões surgiu claramente como a vencedora: a LAN sem fio IEEE 802.11, também conhecida como Wi-Fi \cite{kurose2013}.
 
-Wi-Fi, acrônimo de \textit{Wireless Fidelity}\footnote{Apesar de que a Wi-Fi Alliance nunca ter afirmado tal conclusão.} é o termo comumente usado para tecnologia que é padronizado pelo Instituto de Engenheiros Elétricos e Eletrônicos (IEEE, do inglês, \textit{Institute of Eletrical and Eletronics Engineers}) sob seus 802 padrões de redes locais. Estritamente falando, ``Wi-Fi'' é o nome da marca comercial dado a produtos que são certificados para serem interoperáveis pela Wi-Fi Alliance\footnote{https://www.wi-fi.org/}, que é uma associação comercial que promove o Wi-Fi e realiza as certificações de equipamentos \cite{gorshe2014ieee}.
+Wi-Fi, acrônimo de \textit{Wireless Fidelity}\footnote[3]{Apesar de que a Wi-Fi Alliance nunca ter afirmado tal conclusão.} é o termo comumente usado para tecnologia que é padronizado pelo Instituto de Engenheiros Elétricos e Eletrônicos (IEEE, do inglês, \textit{Institute of Eletrical and Eletronics Engineers}) sob seus 802 padrões de redes locais. Estritamente falando, ``Wi-Fi'' é o nome da marca comercial dado a produtos que são certificados para serem interoperáveis pela Wi-Fi Alliance\footnote[4]{https://www.wi-fi.org/}, que é uma associação comercial que promove o Wi-Fi e realiza as certificações de equipamentos \cite{gorshe2014ieee}.
 
-O padrão Wi-Fi opera nas faixas de 2,4 GHz e 5 GHz, dentro das faixas livres ISM. De qualquer forma, a desregulamentação do espectro da banda ISM estimulou décadas de inovação e tem sido o principal facilitador do acesso sem fio onipresente atualmente \cite{gorshe2014ieee}.
+O padrão Wi-Fi opera nas faixas de 2.4 GHz e 5 GHz, dentro das faixas livres ISM. De qualquer forma, a desregulamentação do espectro da banda ISM estimulou décadas de inovação e tem sido o principal facilitador do acesso sem fio onipresente atualmente \cite{gorshe2014ieee}.
 
 Outro motivo para a proliferação de implementações Wi-Fi é a facilidade de configuração e compatibilidade com as redes Ethernet com fio que precederam o Wi-Fi \cite{gorshe2014ieee}. No ambiente doméstico, a instalação de redes Wi-Fi tem sido relativamente livre de problemas. Mesmo para aqueles que não são tecnicamente experientes, uma instalação profissional não é cara, e geralmente pode ser fornecida pelo provedor de serviços de Internet local.
 
@@ -66,8 +66,8 @@ O outro modo, mostrado na \autoref{fig:topologias}(b), é um exemplo de rede \te
 	}	
 \end{figure}
 
-\section{Visão geral do sistema Wi-Fi}
-\label{sistema-wifi}
+\section{Arquitetura da LAN sem Fio 802.11}
+\label{arquitetura-802-11}
 
 Um sistema de LAN sem fio Wi-Fi geralmente consiste em dois tipos de nós: clientes e pontos de acesso. O ponto de acesso (\autoref{fig:ap}), também chamado de roteador sem fio é o ponto central de qualquer rede sem fio. O ponto de acesso conecta todos os equipamentos sem fio à rede tradicional cabeada, onde está a conexão com a Internet.
 
@@ -93,9 +93,6 @@ Os clientes da rede sem fio são os computadores de mesa, \textit{notebooks}, ag
 	}	
 \end{figure}
 
-\section{Arquitetura da LAN sem Fio 802.11}
-\label{arquitetura-802-11}
-
 A \autoref{fig:arquitetura} ilustra os principais elementos da arquitetura de uma LAN sem fio 802.11. O bloco de construção fundamental da arquitetura 802.11 é o Conjunto Básico de Serviço (BSS, do inglês, \textit{Basic Service Set}). Um BSS contém uma ou mais estações sem fio e um ponto de acesso e possui a função de controlar quando cada cliente móvel pode transmitir. O Sistema de Distribuição (DS, do inglês, \textit{Distribution System}) é o local da topologia onde os pontos de acesso se interconectam numa rede cabeada, podendo ser numa rede padrão Ethernet ou num \textit{backbone}. O Ponto de Serviço Estendido (ESS, do inglês, \textit{Extended Service Set}) é o ponto ou um grupo de pontos básicos de serviço interconectados por um sistema de distribuição \cite{moraes2010}.
 
 \begin{figure}[H]
@@ -110,8 +107,23 @@ A \autoref{fig:arquitetura} ilustra os principais elementos da arquitetura de um
 
 Outro ponto importante na arquitetura 802.11 consiste no fato de a rede permitir a mudança automática e transparente para o usuário quando este sai de sua célula (BSS) e vai para outra célula vizinha, processo este conhecido como \textit{roaming}. Cada célula contém o seu ponto de acesso e por esse motivo o \textit{roaming} multicanal oferece maior abrangência e mobilidade ao sistema (MORAES, 2014).
 
+\subsection{Canais}
+\label{subsec:canais}
+
+Como pode ser visto na \autoref{fig:ism_unii}, a faixa de frequência de 2.4 GHz aloca 83,5 MHz do espectro eletromagnético. Porém, por questões de otimização, essa banda foi segmentada para que mais redes pudessem sem implantadas no mesmo intervalo de frequências.  Assim, o espectro de 2.4 GHz é dividido em fatias uniformemente distribuídos dentro da banda, denominado de canais \cite{flickenger2008}. Cada canal tem a largura de 22 MHz, mas estão separados por apenas 5 MHz. Isto significa que existe intersecção entre canais adjacentes, podendo interferir um com o outro. Isto está representado visualmente na \autoref{fig:canais}. Ainda na \autoref{fig:canais}, é possível observar que os únicos canais em que não há sobreposição são os canais 1, 6 e 11.
+
+\begin{figure}[H]
+	\centering
+	\Caption{\label{fig:canais}Canais e frequências centrais para a banda de 2.4 GHz.}	
+	\UECEfig{}{
+		\includegraphics[scale=.36]{figuras/canais_wifi.pdf}
+	}{
+		\Fonte{\citeonline[p. ~15]{flickenger2008}.}
+	}	
+\end{figure}
+
 \section{Padrão IEEE 802.11}
-\label{padrao-ieee-802-11}
+\label{sub:padrao-ieee-802-11}
 
 Desde a introdução das redes sem fio como meio de acesso à Internet, o sucesso das mesmas só cresceu, com isso várias empresas procuram formas de padronizar essa tecnologia. O problema é que cada empresa criou seu próprio padrão de rede, o que dificultava a compatibilidade entre equipamentos e protocolos.
 Entretanto, para que os equipamentos pudessem se comunicar entre si, deveriam usar os mesmos padrões de comunicação. Com o objetivo de garantir a interoperabilidade dos diversos tipos de equipamentos e fabricantes existentes, os membros do IEEE criaram, em 1997, após sete anos de pesquisa e desenvolvimento, o padrão IEEE 802.11, o primeiro a ser desenvolvido por uma instituição independente, o que impulsionou a sua grande aceitação entre as empresas fabricantes de equipamentos \cite{fluminense2010}.
@@ -119,9 +131,9 @@ Entretanto, para que os equipamentos pudessem se comunicar entre si, deveriam us
 À medida que a tecnologia de redes sem fio evoluiu, o padrão IEEE 802.11 foi expandido de forma a melhorar aspectos da rede, como a taxa de transmissão e a segurança. Estas melhorias foram incorporadas sob a forma de ``emendas'', designadas por letras acrescentadas ao nome do padrão, como, por exemplo, IEEE 802.11a \cite{fluminense2010}. A seguir, algumas das principais ``emendas'' são explicadas com algum detalhe, de acordo com o ano de surgimento.
 
 \subsection{IEEE 802.11b}
-\label{802-11b}
+\label{subsec:802-11b}
 
-O padrão 802.11b foi o primeiro padrão IEEE 802.11 aprovado a se popularizar em setembro de 1999. Ele opera na faixa entre 2,4 e 2,4835 GHz e tem a possibilidade de estabelecer conexões nas seguintes velocidades de transmissão: 1 Mbps, 2 Mbps, 5.5 Mbps e 11 Mbps \cite{moraes2010,fluminense2010}.
+O padrão 802.11b foi o primeiro padrão IEEE 802.11 aprovado a se popularizar em setembro de 1999. Ele opera na faixa entre 2,4 e 2,4835 GHz e tem a possibilidade de estabelecer conexões nas seguintes velocidades de transmissão: 1 Mbps, 2 Mbps, 5.5 Mbps e 11 Mbps \cite{moraes2010,fluminense2010}. \textcolor{blue}{Em ambientes fechados, o IEEE 802.11b consegue ter um alcance de cerca de 35 metros, já para locais abertos pode chegar a 140 metros de cobertura.}
 
 \subsection{IEEE 802.11a}
 \label{802-11a}
@@ -131,17 +143,17 @@ O padrão 802.11a foi lançado no mesmo ano que o 802.11b e, apesar de oferecer 
 As frequências utilizadas por este padrão estão entre 5,725 e 5,875 GHz. Nesta faixa de frequência mais alta, o sinal é mais suscetível a perdas de propagação, diminuindo seu alcance em comparação com a faixa utilizada pelo IEEE 802.11b. Em contrapartida, o uso desta frequência pode ser atraente por estar menos sujeita a interferência de outras fontes. Não existe compatibilidade entre o 802.11a e o 802.11b, pois eles operam em duas faixas de frequência distintas \cite{moraes2010,fluminense2010}.
 
 \subsection{IEEE 802.11g}
-\label{802-11g}
+\label{subsec:802-11g}
 
-O padrão 802.11g, lançado em 2003, pode ser considerado o sucessor do padrão 802.11b, pois opera na mesma faixa de frequência de 2,4 GHz. Dispositivos que implementam o 802.11g costumam ser retrocompatíveis, isto é, implementam também o 802.11b, sendo muitas vezes especificados como dispositivos 802.11b/g. Sua principal vantagem é a possibilidade de operar com taxas de transmissão de até 54 Mbps, como o IEEE 802.11a, e ao mesmo tempo ter o alcance do IEEE 802.11b \cite{moraes2010,fluminense2010}.
+O padrão 802.11g, lançado em 2003, pode ser considerado o sucessor do padrão 802.11b, pois opera na mesma faixa de frequência de 2.4 GHz. Dispositivos que implementam o 802.11g costumam ser retrocompatíveis, isto é, implementam também o 802.11b, sendo muitas vezes especificados como dispositivos 802.11b/g. Sua principal vantagem é a possibilidade de operar com taxas de transmissão de até 54 Mbps, como o IEEE 802.11a, e ao mesmo tempo ter o alcance do IEEE 802.11b \cite{moraes2010,fluminense2010}.
 
 \subsection{IEEE 802.11n}
-\label{802-11n}
+\label{subsec:802-11n}
 
-O desenvolvimento do padrão 802.11n foi iniciado em 2004 e publicado em 2009. Este padrão pode operar nas faixas de 2,4 GHz e 5 GHz, o que o torna compatível com os padrões anteriores. Sua principal característica é o aumento considerável das taxas de transferência de dados através da combinação de múltiplas vias de transmissão (MIMO, do inglês, \textit{Multiple-Input and Multiple-Output}). O padrão 802.11n pode operar com taxas de transmissão de dados de até 600 Mbps em um canal de 40 MHz \cite{moraes2010}.
+O desenvolvimento do padrão 802.11n foi iniciado em 2004 e publicado em 2009. Este padrão pode operar nas faixas de 2.4 GHz e 5 GHz, o que o torna compatível com os padrões anteriores. Sua principal característica é o aumento considerável das taxas de transferência de dados através da combinação de múltiplas vias de transmissão (MIMO, do inglês, \textit{Multiple-Input and Multiple-Output}). O padrão 802.11n pode operar com taxas de transmissão de dados de até 600 Mbps em um canal de 40 MHz \cite{moraes2010}.
 
 \subsection{IEEE 802.11ac}
-\label{802-11ac}
+\label{subsec:802-11ac}
 
 O padrão IEEE 802.11ac foi desenvolvido entre 2011 e 2013 e publicado em dezembro de 2013. Pode ser considerado como o sucessor, em termos de taxa de transmissão, do IEEE 802.11n \cite{alecrim2008site}.
 A principal vantagem do 802.11ac está em sua velocidade, estimada em até 433 Mbps no modo mais simples. Mas, teoricamente, é possível fazer a rede superar os 6 Gbps em uma configuração que utiliza múltiplas antenas transmissoras (no máximo, oito antenas podem ser utilizadas). Pelo fato dos equipamentos comumente saírem de fábrica com três antenas, a taxa máxima de transmissão é de aproximadamente de 1,3 Gbps \cite{alecrim2008site}.
@@ -149,11 +161,11 @@ A principal vantagem do 802.11ac está em sua velocidade, estimada em até 433 M
 O 802.11ac trabalha na frequência de 5 GHz, sendo que, dentro desta faixa, cada canal pode ter, por padrão, largura de 80 MHz ou 160 MHz como opcional. Além disso, o 802.11ac possui técnicas de modulação avançadas. Precisamente, o padrão trabalha com a técnica MU-MIMO (do inglês, \textit{Multi-User} MIMO), que permite que sejam transferidos e recebidos dados simultaneamente para todos os terminais, o que resulta em uma melhoria nas velocidades de transferência na mesma frequência de operação \cite{alecrim2008site}.
 
 \subsection{IEEE 802.11ax}
-\label{802-11ax}
+\label{subsec:802-11ax}
 
 O padrão 802.11ax, chamado Wi-Fi 6, um nome mais simples e comercial atribuído pela Wi-Fi Alliance, é o sucessor do 802.11ac. Até momento deste trabalho o Wi-Fi 6 encontra-se em processo de desenvolvimento. Entretanto, já existe fabricantes trabalhando em novos equipamentos compatíveis com o novo padrão de rede sem fio \cite{plaza2018site}.
 
-Com o IEEE 802.11ax a previsão é que os equipamentos consigam operar com a velocidade máxima de 14 Gbps, enquanto na prática a transmissão estará próxima dos 11 Gbps. Diferentemente do 802.11ac que opera apenas na banda de 5 GHz, o Wi-Fi 6 é \textit{dual band} (opera em 2,4 GHz e 5 GHz). Outras promessas são um consumo de energia menor para os dispositivos conectados e uma maior capacidade em manter um bom alcance mesmo com a presença de barreiras, como paredes, que acabam atrapalhando a propagação do sinal pelo ambiente \cite{plaza2018site}.
+Com o IEEE 802.11ax a previsão é que os equipamentos consigam operar com a velocidade máxima de 14 Gbps, enquanto na prática a transmissão estará próxima dos 11 Gbps. Diferentemente do 802.11ac que opera apenas na banda de 5 GHz, o Wi-Fi 6 é \textit{dual band} (opera em 2.4 GHz e 5 GHz). Outras promessas são um consumo de energia menor para os dispositivos conectados e uma maior capacidade em manter um bom alcance mesmo com a presença de barreiras, como paredes, que acabam atrapalhando a propagação do sinal pelo ambiente \cite{plaza2018site}.
 
 A visão resumida dos padrões IEEE 802.11 apresentados anteriormente é mostrada na \autoref{tab:resumo-ieee-802-11}.
 
@@ -191,14 +203,17 @@ Caso surja a necessidade de se planejar a conexão de dispositivos em escritóri
 
 Porém, é importante salientar que uma rede sem fio jamais chega ao mesmo nível de performance da rede cabeada tradicional \cite{moraes2010}. Consideremos também que o meio não guiado e a frequência são compartilhados: quanto mais estações conectadas, menor o desempenho final da rede.
 
-\section{Site Survey}
-\label{sec:site-survey}
+\subsection{Site Survey}
+\label{subsec:site-survey}
 
 Um procedimento muito importante para o projeto de uma rede sem fio é a utilização de uma metodologia chamada \textit{site survey} (em português, pesquisa do local). Essa metodologia consiste na inspeção técnica minuciosa do local onde será instalada a nova rede, na avaliação dos resultados obtidos da infraestrutura existente ou na identificação e solução dos problemas de um sistema já em funcionamento \cite{pinheiro2004site}.
 
 O \textit{site survey} é uma ferramenta indispensável para detectar e ultrapassar problemas de performance após a implantação de uma nova infraestrutura ou ampliação da rede existente. Durante a inspeção do local, devem ser levantados dados técnicos das condições arquitetônicas do local, que inclui verificar a existência ou não de obstáculos que possam dificultar a distribuição do cabeamento, o posicionamento de equipamentos, a segurança do sistema, etc. \cite{moraes2010,pinheiro2004site}.
 
-No caso específico das redes Wi-Fi, além das condições arquitetônicas do local, a inspeção deve contemplar a análise de possíveis fontes de interferência de radiofrequência, níveis e condições de propagação do sinal, área de cobertura (ou sem cobertura), servindo como fonte adicional de informação para o projeto de posicionamento dos pontos de acesso \cite{pinheiro2004site}. Em seguida, no planejamento de radiofrequência, finalizada a coleta de dados via \textit{site survey}, ajustes finais são feitos nos parâmetros de rede para obter um desempenho otimizado \cite{kar2018ieee}. A sequência completa de etapas do \textit{site survey} em redes \textit{wireless} está ilustrada pelo fluxograma da \autoref{fig:fluxograma-site-survey}. Para uma descrição mais detalhada de cada etapa do processo, consulte \citeonline{kar2018ieee}.
+No caso específico das redes Wi-Fi, além das condições arquitetônicas do local, a inspeção deve contemplar a análise de possíveis fontes de interferência de radiofrequência, níveis e condições de propagação do sinal, área de cobertura (ou sem cobertura), servindo como fonte adicional de informação para o projeto de posicionamento dos pontos de acesso \cite{pinheiro2004site}. 
+
+\textcolor{blue}{Os dados obtidos no \textit{site survey} são usados para estimar o orçamento de recursos técnicos, como requisitos de \textit{hardware}, largura de banda e fontes de energia.
+Em seguida, no planejamento de radiofrequência (RF) ajustes finais são feitos na rede para obter um desempenho otimizado em seus parâmetros mais importantes, como capacidade de cobertura e distribuição da largura de banda entre as células \cite{kar2018ieee}. Por fim, na implantação, é feito o processo de instalação dos pontos de acesso, fontes de alimentação, cabos, conectores, etc. Uma pesquisa ativa de pós-implantação pode ser realizada para detectar falhas de cobertura e falhas de largura de banda no sistema \cite{kar2018ieee}. A sequência completa de etapas do \textit{site survey} em redes \textit{wireless} está ilustrada pelo fluxograma da \autoref{fig:fluxograma-site-survey}.}
 
 \begin{figure}[H]
 	\centering
@@ -222,15 +237,15 @@ O processo de pesquisa do local pode ser executado manualmente ou usando um \tex
 
 \textit{Site survey outdoor}: consiste em realizar a inspeção de redes \textit{wireless} em uma escala muito maior que a existente na modalidade \textit{indoor}. Além da localização e posição de pontos de acesso e das antenas de transmissão de grande porte, verifica-se a existência de linha de visada direta ou não com o fonte transmissora \cite{pinheiro2004site}. Essa modalidade de inspeção produz mapas de calor com maior complexidade de análise, devido às dimensões do terreno, da variabilidade do relevo e da grande quantidade de fontes de interferência \apud[p.~73]{rodrigues2007}{geier2002}.
 
-\subsection{Softwares de Site Survey}
-\label{subsec:softwares-site-survey}
+\subsubsection{Softwares de Site Survey}
+\label{subsubsec:softwares-site-survey}
 
 Implantar uma rede Wi-Fi que cubra uma grande área e com um sinal forte não é uma tarefa fácil. Devido à interferência causada por outras redes Wi-Fi e à presença de grandes obstáculos tais como paredes e mobília, muitas redes Wi-Fi são castigadas por quedas frequentes da conexão, velocidades baixas, e a presença de zonas sem cobertura de sinal (áreas de sombra).
 
 No entanto, é possível otimizar o desempenho de uma rede Wi-Fi com a ajuda de uma ferramenta de \textit{software} específica que gere, por exemplo, um mapa de calor, que consiste em um mapa da cobertura e força do sinal \textit{wireless} baseado na representação real do local de interesse. No mapa de calor é possível identificar, de acordo com a colorização dos setores, onde os nível de potência do sinal é mais forte ou mesmo inexiste, contribuindo para eventuais alterações na infraestrutura da rede.
 
-\subsubsection{NetSpot}
-\label{subsubsec:netspot}
+\subsubsubsection{NetSpot}
+\label{subsubsubsec:netspot}
 
 Disponível para o sistema operacional MacOS e Windows, NetSpot é a ferramenta de \textit{software} de \textit{site survey} paga projetada para ser utilizada tanto por profissionais quanto por usuários domésticos. Dispõe de uma interface gráfica intuitiva, facilitando sua utilização.
 
@@ -246,8 +261,8 @@ Com o NetSpot é possível criar, na janela \textit{survey}, um mapa de calor a 
 	}
 \end{figure}
 
-\subsubsection{Ekahau HeatMapper}
-\label{subsubsec:ekahau}
+\subsubsubsection{Ekahau HeatMapper}
+\label{subsubsubsec:ekahau}
 
 Ekahau HeatMapper é um \textit{software} de inspeção objetivo, com suporte para os padrões 802.11a/b/g/n e uma interface de usuário simples (\autoref{fig:ekahau}). Esta ferramenta, além do mapa de calor, pode descobrir automaticamente todos os pontos de acesso próximos e detectar as suas configurações básicas \cite{Ekahau2019}. O Ekahau HeatMapper pode ser adquirido gratuitamente pelo site do desenvolvedor e funciona em qualquer \textit{notebook} com Windows ou computador \textit{desktop} com um adaptador Wi-Fi.
 
@@ -261,8 +276,8 @@ Ekahau HeatMapper é um \textit{software} de inspeção objetivo, com suporte pa
 	}
 \end{figure}
 
-\subsubsection{Acrylic Wi-Fi Heatmaps}
-\label{subsubsec:acrylic-wifi-heatmaps}
+\subsubsubsection{Acrylic Wi-Fi Heatmaps}
+\label{subsubsubsec:acrylic-wifi-heatmaps}
 
 O Acrylic Wi-Fi Heatmaps consiste de uma ferramenta avançada de análise de rede sem fio para obter uma visão detalhada do cenário \textit{wireless} ao redor. O Acrylic Wi-Fi Heatmaps pode analisar tanto o espectro de frequência de 2.4 GHz quanto o de 5 GHz e gerar mapas de calor detalhados e relatórios em uma variedade de formatos de arquivo comum (Word, CSV, KMZ) \cite{Netspot2019}. 
 
@@ -278,12 +293,12 @@ O gráfico de cobertura  de sinal gerado por esta ferramenta de \textit{software
 	}
 \end{figure}
 
-\subsubsection{VisiWave Site Survey}
-\label{subsubsec:visiwave}
+\subsubsubsection{VisiWave Site Survey}
+\label{subsubsubsec:visiwave}
 
 O VisiWave Site Survey destina-se especialmente a inspeções de larga escala, como pode ser visto na \autoref{fig:visiwave}, sendo capaz de fornecer três métodos eficazes para a captura de dados: um ponto de cada vez; caminhadas contínuas pela área de pesquisa e posicionamento GPS (do inglês, \textit{Global Positioning System}) para levantamentos ao ar livre. 
 
-É possível criar relatórios personalizados ou reutilizar modelos de relatórios para visualizar sua cobertura ou visualizar interativamente os dados de cobertura no Google Earth\footnote{Google Earth é um programa de computador desenvolvido e distribuído pela empresa estadunidense do Google cuja função é apresentar um modelo tridimensional do globo terrestre, construído a partir de mosaico de imagens de satélite obtidas de diversas fontes.} \cite{Netspot2019}. O VisiWave Site Survey suporta a maioria dos adaptadores de rede Wi-Fi, e não requer nenhum componente de \textit{hardware} especial para funcionar.
+É possível criar relatórios personalizados ou reutilizar modelos de relatórios para visualizar sua cobertura ou visualizar interativamente os dados de cobertura no Google Earth\footnote[5]{Google Earth é um programa de computador desenvolvido e distribuído pela empresa estadunidense do Google cuja função é apresentar um modelo tridimensional do globo terrestre, construído a partir de mosaico de imagens de satélite obtidas de diversas fontes.} \cite{Netspot2019}. O VisiWave Site Survey suporta a maioria dos adaptadores de rede Wi-Fi, e não requer nenhum componente de \textit{hardware} especial para funcionar.
 \newpage
 \begin{figure}[H]
 	\centering
@@ -295,8 +310,8 @@ O VisiWave Site Survey destina-se especialmente a inspeções de larga escala, c
 	}
 \end{figure}
 
-\subsubsection{AirMagnet Survey PRO}
-\label{subsubsec:airmagnet-pro}
+\subsubsubsection{AirMagnet Survey PRO}
+\label{subsubsubsec:airmagnet-pro}
 
 O AirMagnet Survey PRO pode criar um mapa de calor de leitura fácil para sinal/ruído, taxa de transferência de LAN sem fio, taxas de dados, taxas de repetição e as perdas de pacotes da rede, aliado com uma interface gráfica visualmente rica em opções (\autoref{fig:airmagnet-pro}). Este \textit{software} suporta todos os padrões de rede Wi-Fi e possui suporte a um grande número de recursos \cite{Netspot2019}.
 
@@ -310,8 +325,8 @@ O AirMagnet Survey PRO pode criar um mapa de calor de leitura fácil para sinal/
 	}
 \end{figure}
 
-\subsubsection{Xirrus Wi-Fi Inspector}
-\label{subsubsec:xirrus-wifi}
+\subsubsubsection{Xirrus Wi-Fi Inspector}
+\label{subsubsubsec:xirrus-wifi}
 
 O Xirrus Wi-Fi Inspector é um \textit{software} de análise direcionado principalmente para usuários que frequentemente acessam a Internet utilizando computadores portáteis e desejam um método fácil de encontrar redes Wi-Fi, disponível em versão grátis e paga, e com uma interface gráfica amigável e simples (\autoref{fig:xirrus-wifi}). Além de mostrar o SSID, velocidade e o tipo de segurança de cada rede disponível, o programa ainda indica a distância de cada ponto de acesso em relação ao usuário e permite realizar uma série de testes que verificam tanto a velocidade da conexão quanto sua estabilidade.
 

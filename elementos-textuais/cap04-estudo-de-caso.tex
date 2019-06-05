@@ -24,7 +24,7 @@ Na \autoref{fig:vista-campus} tem-se uma visão total da área do \textit{campus
 	}	
 \end{figure}
 
-\section{Infraestrutura da rede \textit{wireless}}
+\section{Infraestrutura da rede sem fio}
 \label{sec:infraestrutura-wireless}
 
 A instituição conta com uma infraestrutura de rede sem fio com vários pontos de acesso distribuídos em diversos locais de sua área. No bloco 1 (bloco inicial) encontram-se a maior concentração de pontos de acesso, destinados a suprir as necessidades administrativas e de pesquisas desenvolvidas no \textit{campus}. Para o segundo andar Bloco Didático, há a presença de dois pontos de acesso: um destinado aos estudantes e o outro aos professores, ambos localizados na sala de coordenação e indicados pelos marcadores conforme ilustra a \autoref{fig:local-ap}. Para o primeiro andar, não existe ponto de acesso instalados. Entretanto, todos os pontos de acesso no \textit{campus} são protegidos com senhas de acesso alfanuméricos distintas.
@@ -46,9 +46,9 @@ As configurações que podem ser encontradas nos pontos de acesso variam de equi
 \section{Softwares utilizados}
 \label{sec:softwares-utiliados}
 
-Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitarão avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper).
+Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que \textcolor{blue}{possibilitam} avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper).
 
-Como descrito na capítulo 3, com Xirrus Wi-Fi Inspector, é fácil encontrar redes \textit{wireless} disponíveis, sendo totalmente gratuito. Além disso, a página principal dele exibe quatros campos diferentes que podem ser expandidos para uma visualização mais detalhada: \textit{Radar}, \textit{History}, \textit{Connection} e \textit{Networks}. Cada um possui algumas funções específicas, mas para a proposta deste trabalho, apenas o campo \textit{Networks} foi explorado, já esta janela exibe as informações detalhadas das redes detectadas em determinada área (\autoref{fig:software-xirrus}).
+\textcolor{blue}{Além de ser gratuito, o Xirrus Wi-Fi Inspector apresenta uma interface amigável para a visualização das redes Wi-Fi disponíveis}. Além disso, a página principal dele exibe quatros campos diferentes que podem ser expandidos para uma visualização mais detalhada: \textit{Radar}, \textit{History}, \textit{Connection} e \textit{Networks}. Cada um possui algumas funções específicas, mas para a proposta deste trabalho, apenas o campo \textit{Networks} foi explorado, já esta janela exibe as informações detalhadas das redes detectadas em determinada área (\autoref{fig:software-xirrus}).
 
 \begin{figure}[H]
 	\centering
@@ -68,14 +68,14 @@ Na janela \textit{Networks} são apresentadas algumas informações dos pontos d
 	\item \textbf{\textit{Wi-Fi Mode}:} apresenta a versão do padrão 802.11 configurado no ponto de acesso.
 	\item \textbf{\textit{Security}:} exibe o protocolo de segurança utilizado pela rede sem fio.
 	\item \textbf{\textit{Vendor}:} mostra qual o nome do fabricante do equipamento.
-	\item \textbf{BSSID, do inglês, \textit{Basic Service Set Identifier}}: mostra o endereço físico do dispositivo da rede Wi-Fi, que no caso é o endereço MAC (do inglês, \textit{Media Access Control}).
+	\item \textbf{BSSID (do inglês, \textit{Basic Service Set Identifier})}: mostra o endereço físico do dispositivo da rede Wi-Fi, que no caso é o endereço MAC (do inglês, \textit{Media Access Control}).
 	\item \textbf{\textit{Channel}:} exibe o canal de frequência que o ponto de acesso está utilizando.
 	\item \textbf{\textit{Frequency}:} representa a frequência utilizada por um determinado ponto de acesso, podendo ser 2.4 GHz ou 5 GHz.
 	\item \textbf{\textit{Network Type}:} exibe o tipo de operação do dispositivo que opera a rede Wi-Fi, seja ponto de acesso ou \textit{ad hoc}.
 	\item \textbf{\textit{Graph}:} caixa de seleção para ativar/desativar a representação gráfica do nível de sinal da rede Wi-Fi ao longo do tempo.
 \end{compactitem}
 	
-Já para a criação de mapas de calor dos sinais de radiofrequência, o programa utilizado foi o Ekahau HeatMapper, também descrito no capítulo anterior. Com ele é possível descobrir a cobertura de uma rede Wi-Fi padrão 802.11n/b/g a partir da visualização do mapa de calor obtido na coleta de dados em diversos pontos espalhados pelo local.
+\textcolor{blue}{Já para a criação de mapas de calor dos sinais de radiofrequência, o programa utilizado foi o Ekahau HeatMapper.} Com ele é possível descobrir a cobertura de uma rede Wi-Fi padrão 802.11n/b/g a partir da visualização do mapa de calor obtido na coleta de dados em diversos pontos espalhados pelo local.
 
 O programa possibilita ao usuário escolher um arquivo de seu computador que representa a planta baixa do ambiente de interesse, para assim marcar os pontos onde as medidas de potência foram capturadas e posteriormente a coloração. Esse processo é representado pela \autoref{fig:software-ekahau}.
 
@@ -144,7 +144,7 @@ O processo de \textit{site survey} desenvolvido no IFCE \textit{campus} Tauá, c
 
 Nesta primeira etapa do \textit{site survey}, após a instalação dos programas no \textit{notebook}, já citados, foi feita uma vistoria em toda a área correspondente ao Bloco Didático do campus com a objetivo de verificar a sua infraestrutura física, identificar possíveis pontos para a medição e a presença ou não de fontes de interferências.
 
-O ambiente analisado abrange uma área do tipo \textit{indoor} por conter salas, e também \textit{outdoor} devido ao espaço livre no prédio, como os que estão no primeiro andar. As \autoref{fig:andar1} e \ref{fig:andar2} mostram alguns dos pontos que foram verificados.
+O ambiente analisado abrange uma área do tipo \textit{indoor} por conter salas, e também \textit{outdoor} devido ao espaço livre no prédio, como os que estão no primeiro andar. \textcolor{blue}{As Figuras \ref{fig:andar1}} e \ref{fig:andar2} mostram alguns dos pontos que foram verificados.
 
 \begin{figure}[H]
 	\centering
