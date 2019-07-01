@@ -26,7 +26,7 @@
 
 % Se você quer ver as margens do documento no PDF, descomente essa linha
 % As linhas das margens serao impressas
-\usepackage[showframe, pass]{geometry}
+%\usepackage[showframe, pass]{geometry}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%             Definições              %%
@@ -47,7 +47,7 @@
 %\OnehalfSpacing
 
 % Define o espaçamento de cada item a partir da margem esquerda
-\setdefaultleftmargin{4.18em}{}{}{}{}{}
+\setdefaultleftmargin{4.16em}{}{}{}{}{}
 
 % Define as margens do documento
 \setlrmarginsandblock{3cm}{2cm}{*} % externa / interna
@@ -93,7 +93,7 @@
 \renewcommand{\ABNTEXsectionfontsize}{\normalsize}
 
 % Estilo da subsection 1.1.1
-\renewcommand{\ABNTEXsubsectionfont}{\bfseries}
+\renewcommand{\ABNTEXsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 
 % Estilo da subsection 1.1.1.1
@@ -101,13 +101,13 @@
 \renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
 
 % Estilo da subsection 1.1.1.1.1
-\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont\itshape}
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\normalfont}
 \renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
 
 % Margen da legenda da figura e da tabela
 \captionsetup{
 	justification=centering,	% Centraliza o caption
-	skip=5pt					% Retira o espaco entre a figura/tabela e o caption
+	skip=5pt					% espaco entre a figura/tabela e o caption
 	%font=small              	
 	%labelfont=bf,				% A palavra 'Figure 1' agora eh negrito
 	%font=bf					% O texto depois de 'Figure 1' agora eh negrito
@@ -1524,12 +1524,16 @@
 \setlength{\cftbeforesubsubsectionskip}{0pt}
 \setlength{\cftbeforechapterskip}{0pt}
 
+% Remove caixa alta do titulo da section no texto
+\setsecheadstyle{\normalfont\normalsize}
+
 %\renewcommand\cftchapterfont{\normalsize}
 \renewcommand\cftsectionfont{\normalfont}
 \renewcommand\cftsubsectionfont{\normalfont}
 \renewcommand\cftsubsubsectionfont{\normalfont}
-% Altera a fonte da seção quinária
-\renewcommand*{\cftparagraphfont}{\normalsize\normalfont}
+
+% Altera a fonte da seção quinária 1.1.1.1.1
+\renewcommand*{\cftparagraphfont}{\normalsize\normalfont\itshape}
 
 % Páginas do sumário não podem ser negrito.
 \renewcommand\cftchapterpagefont{\normalfont}
@@ -1539,22 +1543,22 @@
 \renewcommand\cftparagraphpagefont{\normalfont}
 
 % Secao Secundaria (Section): Caixa alta, Não Negrito, tamanho 12
-\makeatletter
-\let\oldcontentsline\contentsline
-\def\contentsline#1#2{%
-	\expandafter\ifx\csname l@#1\endcsname\l@section %
-	\expandafter\@firstoftwo %
-	\else %
-	\expandafter\@secondoftwo %
-	\fi %
-	{%
-		\oldcontentsline{#1}{\MakeTextUppercase{#2}}%
-	}{%
-	\oldcontentsline{#1}{#2}%
-}%
-}
-\makeatother
-
+%\makeatletter
+%\let\oldcontentsline\contentsline
+%\def\contentsline#1#2{%
+%	\expandafter\ifx\csname l@#1\endcsname\l@section %
+%	\expandafter\@firstoftwo %
+%	\else %
+%	\expandafter\@secondoftwo %
+%	\fi %
+%	{%
+%		\oldcontentsline{#1}{\MakeTextUppercase{#2}}%
+%	}{%
+%	\oldcontentsline{#1}{#2}%
+%}%
+%}
+%\makeatother
+%
 \makeatletter
 \renewcommand{\fonte}[2][\fontename]{%
 	\M@gettitle{#2}%

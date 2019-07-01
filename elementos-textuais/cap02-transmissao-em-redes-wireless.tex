@@ -1,7 +1,7 @@
 \chapter{Transmissão em Redes sem Fio}
 \label{cap:transmissao-redes-sem-fio}
 
-As ondas de rádio são fáceis de gerar, podem percorrer longas distâncias e penetrar facilmente em diversos materiais, por isso, são amplamente utilizadas para comunicação, seja em ambientes fechados, seja em locais abertos. As ondas de rádio também são omnidirecionais, o que significa que elas se propagam em todas as direções a partir da origem. Desse modo, o transmissor e o receptor não precisam estar cuidadosamente alinhados para que haja comunicação \cite{tanenbaum2011}. Por todas essas características, as ondas de rádio são o principal recurso para que a comunicação sem fio se tornasse possível, resultando em uma dispersão generalizada pelo globo.
+As ondas de rádio são fáceis de gerar, podem percorrer longas distâncias e penetrar em diversos tipos de materiais, por isso, são amplamente utilizadas para comunicação, desde ambientes abertos até ambientes fechados. As ondas de rádio também são omnidirecionais, o que significa que elas se propagam em todas as direções a partir da origem. Desse modo, o transmissor e o receptor não precisam estar perfeitamente alinhados para que haja comunicação \cite{tanenbaum2011}. Por todas essas características, as ondas de rádio são o principal recurso para que a comunicação sem fio se tornasse possível, resultando em sua dispersão generalizada pelo globo.
 
 \section{O Espectro Eletromagnético}
 \label{sec:espectro-eletromagnetico}
@@ -20,7 +20,7 @@ Essas três grandezas -- frequência ($f$), comprimento de onda ($\lambda$) e ve
 	\end{aligned}
 \end{equation}
 
-\textcolor{blue}{Desta forma, pode-se observar que as propriedades de uma onda eletromagnética dependem de sua frequência (ou comprimento de onda), já que a velocidade da luz é uma constante.}
+Desta forma, pode-se observar que as propriedades de uma onda eletromagnética dependem de sua frequência (ou comprimento de onda), já que a velocidade da luz é uma constante.
 
 \begin{figure}[H]
 	\centering
@@ -36,7 +36,7 @@ Uma onda eletromagnética pode ser gerada ou captada por circuitos eletrônicos 
 
 Os dispositivos sem fio usam ondas eletromagnéticas para transmitir suas informações, porém são restritos para operar em uma determinada banda (ou faixa) de frequência. Cada faixa tem uma largura de banda associada, que é simplesmente a quantidade de espaço de frequência na banda. Se a variação entre 2,40 GHz e 2,48 GHz é usada por um dispositivo, então a largura de banda será de 0,08 GHz ou 80 MHz.
 
-A largura de banda adquiriu uma conotação de ser uma medida da capacidade de dados de um link. Uma grande quantidade de matemática, teoria da informação e processamento de sinais pode ser usada para demonstrar que fatias mais largas de frequência podem ser usadas para transmitir mais informações \cite{gast2002}. Por exemplo, um canal de telefonia móvel analógico requer uma largura de banda de 20 kHz. Os sinais de televisão são muito mais complexos, já que, necessariamente, transmitem tráfego de áudio e vídeo, e por esse motivo possuem uma largura de banda consideravelmente maior, cerca de 6 MHz \cite{gast2002}.
+A largura de banda adquiriu uma conotação de ser uma medida da capacidade de dados de um \textit{link}. Uma grande quantidade de matemática, teoria da informação e processamento de sinais pode ser usada para demonstrar que fatias mais largas de frequência podem ser usadas para transmitir mais informações \cite{gast2002}. Por exemplo, um canal de telefonia móvel analógico requer uma largura de banda de 20 kHz. Os sinais de televisão são muito mais complexos, já que, necessariamente, transmitem tráfego de áudio e vídeo, e por esse motivo possuem uma largura de banda consideravelmente maior, cerca de 6 MHz \cite{gast2002}.
 
 Cada banda de frequência utilizada nas telecomunicações estão contidas em um modelo de escala comum, onde é apresentado o intervalo completo de todas as possíveis frequências da radiação eletromagnética, denominado de espectro eletromagnético. A \autoref{fig:espectro} ilustra todas as variações de frequências contidas no espectro eletromagnético.
 
@@ -44,7 +44,7 @@ Cada banda de frequência utilizada nas telecomunicações estão contidas em um
 	\centering
 	\Caption{\label{fig:espectro}O espectro eletromagnético e a maneira como ele é usado na comunicação.}	
 	\UECEfig{}{
-		\includegraphics[scale=.85]{figuras/espectro_eletromagnetico.pdf}
+		\includegraphics[scale=1]{figuras/espectro_eletromagnetico.pdf}
 	}{
 		\Fonte{\citeonline[p. ~70]{tanenbaum2011}.}
 	}	
@@ -82,7 +82,7 @@ Os efeitos sofridos pela onda eletromagnética ao se propagar são diversos, mas
 \subsection{Absorção}
 \label{sub:absorcao}
 
-Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou dissipam-se totalmente, como ilustra a \autoref{fig:absorcao}. O quanto elas perdem de potência irá depender de sua frequência e do material em que penetram \cite{flickenger2008}. Em analogia, janelas de vidro são, transparentes para a luz, enquanto o vidro usado em óculos de sol filtram uma boa quantidade da intensidade da luz e também da radiação ultravioleta.
+Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou dissipam-se totalmente, como ilustra a \autoref{fig:absorcao}. O quanto elas perdem de potência irá depender de sua frequência e do material em que penetram \cite{flickenger2008}. Em analogia, janelas de vidro são transparentes para a luz, enquanto o vidro usado em óculos de sol filtram uma boa quantidade da intensidade da luz e também da radiação ultravioleta.
 
 \begin{figure}[H]
 	\centering
@@ -117,7 +117,7 @@ Nas comunicações sem fio terrestres, normalmente não existe uma linha de visa
 		\includegraphics[scale=.72]{figuras/reflexao.pdf}
 	}{
 		\Fonte{\citeonline[p. ~18]{flickenger2008}.}%
-		\Nota{\textcolor{blue}{O ângulo de incidência ($\theta_i$) é igual ao ângulo de reflexão ($\theta_r$).}}%
+		\Nota{O ângulo de incidência ($\theta_i$) é igual ao ângulo de reflexão ($\theta_r$).}%
 	}
 \end{figure}
 
@@ -180,7 +180,7 @@ Em comunicações sem fio, a interferência é causada principalmente por fontes
 	\centering
 	\Caption{\label{fig:interferencia}Interferência entre ondas de rádio.}	
 	\UECEfig{}{
-		\includegraphics[scale=.15]{figuras/interferenciaSVG_pdf.pdf}
+		\includegraphics[scale=.13]{figuras/interferenciaSVG_pdf.pdf}
 	}{
 		\Fonte{Adaptado de \citeonline{physics2015}.}
 	}
@@ -240,9 +240,9 @@ O modelo de espaço livre, assim como a maioria dos modelos de propagação de r
 	\end{aligned}
 \end{equation}
 
-\noindent onde $P_T$ é a potência transmitida, $P_R$ E a potência recebida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora e $L_P$ é a perda do percurso entre T-R. Tanto a dedução matemática do ganho da antena ($G$) quanto a da perda do percurso ($L_P$) pode ser encontrada com detalhes em \citeonline{haykin2008}.
+\noindent onde $P_T$ é a potência transmitida, $P_R$ é a potência recebida, $G_T$ é o ganho da antena transmissora, $G_R$ é o ganho da antena receptora e $L_P$ é a perda do percurso entre T-R. Tanto a dedução matemática do ganho da antena ($G$) quanto a da perda do percurso ($L_P$) pode ser encontrada com detalhes em \citeonline{haykin2008}.
 
-A \textcolor{blue}{Eq. \eqref{eq:friis}} é conhecida como equação de Friis. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2008}:
+A Eq. \eqref{eq:friis} é conhecida como equação de Friis. É possível simplificá-la em função do ganho em decibel (dB) \cite{haykin2008}:
 \begin{equation}
 	\begin{aligned}
 	\label{eq:friis-decibel}
@@ -255,7 +255,7 @@ A \textcolor{blue}{Eq. \eqref{eq:friis}} é conhecida como equação de Friis. �
 \subsection{Modelo de dois raios}
 \label{sub:modelo-2-raios}
 
-A equação do espaço livre \textcolor{blue}{(Eq. \eqref{eq:friis})} considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
+A equação do espaço livre (Eq. \eqref{eq:friis}) considera que sempre existe uma linha de visada direta entre transmissor e receptor, não considera, entretanto, o efeito da superfície terrestre na comunicação. Esse fato raramente acontece com transmissões em solo, o que torna o modelo de espaço livre impreciso na grande maioria dos casos \cite{rappaport2009}.
 
 O modelo de reflexão no solo, baseado na ótica geométrica, considera o caminho direto e um caminho de propagação refletido no solo entre o transmissor e o receptor, como ilustra a \autoref{fig:2raios} \cite{rappaport2009}.
 
@@ -279,12 +279,12 @@ A potência recebida a uma distância $d$ do transmissor para o modelo de dois r
 	\end{aligned}
 \end{equation}
 
-\noindent onde $h_T$ é a altura do transmissor e $h_R$ é a altura do receptor. Todo o desenvolvimento algébrico até chegar a \textcolor{blue}{Eq. \eqref{eq:2-raios}} pode ser encontrada em \citeonline{rappaport2009} ou \citeonline{haykin2008}.
+\noindent onde $h_T$ é a altura do transmissor e $h_R$ é a altura do receptor. Todo o desenvolvimento algébrico até chegar a Eq. \eqref{eq:2-raios} pode ser encontrada em \citeonline{rappaport2009} ou \citeonline{haykin2008}.
 
 \subsection{Modelo log-distância (log simplificado)}
 \label{sub:log-distancia}
 
-Os modelos de propagação baseados em medições em campo indicam que que a potência média do sinal recebida cai logaritmicamente com a distância, seja em enlaces de rádio para ambientes fechados \textit{indoor} ou abertos \textit{outdoor} \cite{rappaport2009}. A perda de percurso média para a uma separação T-R qualquer é obtida em função da distância usando um expoente de perda de caminho, $n$, dada por
+Os modelos de propagação baseados em medições em campo indicam que que a potência média do sinal recebida cai logaritmicamente com a distância, seja em enlaces de rádio para ambientes fechados (\textit{indoor}) ou abertos (\textit{outdoor}) \cite{rappaport2009}. A perda de percurso média para a uma separação T-R qualquer é obtida em função da distância usando um expoente de perda de caminho, $n$, dada por
 \begin{equation}
 	\begin{aligned}
 	\label{eq:log-distancia}
@@ -304,7 +304,7 @@ Os modelos de propagação baseados em medições em campo indicam que que a pot
 \noindent onde $PL$ é a perda média do percurso, $n$ é o expoente de perda de caminho (indica a velocidade com a qual essa perda aumenta com relação a distância), $d_0$ é a distância de referência próxima que é determinada pelas medições perto do transmissor, e $d$ é a distância de separação T-R. O valor de $n$ é calculado usando-se a equação de Friis (modelo de espaço livre) ou por medições de campo à distância $d_0$. A Tabela 1 lista os expoentes típicos de perda de percurso em diversos ambientes.
 
 \begin{table}[H]
-	\Caption{\label{tab:tabela-perda-de-percusso}Expoentes de perda de percurso para diferentes ambientes.}%
+	\Caption{\label{tab:tabela-perda-de-percusso}Expoentes de perda de percurso ($n$) para diferentes ambientes.}%
 	\IBGEtab{}{%
 		\begin{tabular}{lc}
 			\toprule
@@ -346,14 +346,14 @@ As perdas do percurso, em dB, para esses três tipos de meios, respectivamente, 
 \end{split}
 \end{equation}
 
-\noindent onde $r$ é o alcance em quilômetros, os parâmetros $A$, $B$, $C$ e $D$\footnote[2]{\textcolor{blue}{As equações que permitem determinar os valores de $A$, $B$, $C$ e $D$ fogem ao escopo deste trabalho e, por isso, podem ser encontrados na literatura em \citeonline{haykin2008}.}} dependem da frequência de operação ($f_c$), da altura da estação transmissora ($h_T$) e da altura da estação receptora ($h_R$).
+\noindent onde $r$ é o alcance em quilômetros, os parâmetros $A$, $B$, $C$ e $D$\footnote[2]{As equações que permitem determinar os valores de $A$, $B$, $C$ e $D$ fogem ao escopo deste trabalho e, por isso, podem ser encontrados na literatura em \citeonline{haykin2008}.} dependem da frequência de operação ($f_c$), da altura da estação transmissora ($h_T$) e da altura da estação receptora ($h_R$).
 
 \subsection{Modelo Multi--Wall--and--Floor}
 \label{sub:modelo-MWF}
 
 O modelo \emph{Multi-Wall-and-Floor} (MWF) leva em consideração a perda decrescente de penetração de paredes/pisos da mesma categoria, à medida que o número de paredes/pisos atravessados aumenta, isto é, defende que a relação entre as  perdas não segue uma linearidade lógica \cite{lott2001ieee}. Por exemplo, dada uma perda de penetração de 2 dB em uma parede de concreto, essa mesma onda, ao penetrar em outra parede de mesma característica, não sofrerá uma atenuação de 2 dB como ocorrido no primeiro obstáculo.
 
-O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente para a análise dos efeitos da propagação em ambientes (\textit{indoor}), pois esses locais concentram grande variedade de divisórias construídas com diferentes materiais. A perda sofrida por uma onda de rádio ao atravessar múltiplas paredes/pisos, $L_{P}$, pode ser dada pela seguinte equação:
+O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente para a análise dos efeitos da propagação em ambientes \textit{indoor}, pois esses locais concentram grande variedade de divisórias construídas com diferentes materiais. A perda sofrida por uma onda de rádio ao atravessar múltiplas paredes/pisos, $L_{P}$, pode ser dada pela seguinte equação:
 \begin{equation}
 	\begin{aligned}
 	\label{eq:mwf}
@@ -363,8 +363,8 @@ O modelo MWF, proposto por \citeonline{lott2001ieee}, é voltado especialmente p
 
 \noindent onde $L_0$ é a perda de trajetória a uma distância de 1m, $n$ é o fator de perda do percurso, $d$ é a distância entre o transmissor e o receptor, $L_{wik}$ é a atenuação devido ao tipo de parede $i$ e à $k$-ésima parede atravessada, $L_{fjk}$ é a atenuação devida ao tipo de piso $j$ e ao $k$-ésimo piso atravessado, $I$ é o número de tipos de parede, $J$ é o número de tipos de piso, $K_{wi}$ é o número de paredes atravessadas do tipo $i$ e $K_{fj}$ é o número de paredes atravessadas do tipo $j$. 
 
-O valor da perda de penetração varia de acordo com o tipo de material ao qual o obstáculo foi construído. A \autoref{tab:tabela-mwf} lista alguns valores de perda de penetração para determinado tipo de material na faixa de frequência de 5,8 GHz.
-
+O valor da perda de penetração varia de acordo com o tipo de material ao qual o obstáculo foi construído. A \autoref{tab:tabela-mwf} lista alguns valores de perda de penetração para diversos tipos de material para medições feitas na faixa de frequência de 5.8 GHz.
+\newpage
 \begin{table}[H]
 	\Caption{\label{tab:tabela-mwf}Valores de perda de penetração da parede para o modelo MWF para 5.8 GHz.}%
 	\IBGEtab{}{%
@@ -376,9 +376,9 @@ O valor da perda de penetração varia de acordo com o tipo de material ao qual 
 			
 			Parede de gesso (rebocada com 1mm de gesso) & 13.5 cm & $L_{w2I} = 3.0\ dB$ \\
 			
-			Cartão áspero & 1.5 cm & $L_{w3I} = 1.0\ dB$ \\
+			Aglomerado de madeira & 1.5 cm & $L_{w3I} = 1.0\ dB$ \\
 			
-			Prato de vidro &  & $L_{w4I} = 2.5\ dB$ \\
+			Vidro plano &  & $L_{w4I} = 2.5\ dB$ \\
 			
 			Janela de vidro duplo (com uma camada de ar de 12mm) & 2.0 cm & $L_{w5I} = 12\ dB$ \\
 			
@@ -386,6 +386,6 @@ O valor da perda de penetração varia de acordo com o tipo de material ao qual 
 			\bottomrule
 		\end{tabular}%
 	}{%
-		\Fonte{\citeonline[p. ~465]{lott2001ieee}.}
+		\Fonte{Adaptado de \apudonline[p. ~467]{lott2001ieee}{ERC1999}.}%
 	}
 \end{table}

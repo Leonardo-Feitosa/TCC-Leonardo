@@ -6,7 +6,7 @@
 
 Ao longo dos anos, a evolução  dos sistemas e serviços de telecomunicações criou uma necessidade para seus usuários de estarem conectados ``todo tempo'' e ``em qualquer lugar'', isto é, esses usuários desejam estar permanentemente \textit{online}. Para esses usuários, os meios guiados (par trançado, cabo coaxial e fibra óptica) não têm a menor utilidade, pois uma característica essencial para cumprimento destas necessidades é a mobilidade.
 
-No período em que as LANs cabeadas dominavam a infraestrutura de rede de computadores, somente era possível conectar computadores à Internet e entre si por meio de cabos padrão Ethernet. Este tipo de conexão é bastante popular, mas conta com algumas limitações, por exemplo: só se pode movimentar o computador até o limite de alcance do cabo; ambientes com um grande número computadores podem exigir adaptações na estrutura do prédio para a passagem dos fios; em uma residência, pode ser necessário realizar perfurações na parede para que os cabos alcancem outros cômodos; a manipulação constante ou incorreta pode fazer com que o conector do cabo de rede se danifique \cite{alecrim2008site}.
+No período em que as LANs cabeadas dominavam a infraestrutura de rede de computadores, somente era possível conectar computadores à Internet e entre si por meio de cabos padrão Ethernet. Este tipo de conexão é bastante popular, mas conta com algumas limitações, por exemplo: só se pode movimentar o computador até o limite de alcance do cabo; ambientes com um grande número de computadores podem exigir adaptações na estrutura do prédio para a passagem dos fios; em uma residência, pode ser necessário realizar perfurações na parede para que os cabos alcancem outros cômodos; a manipulação constante ou incorreta pode fazer com que o conector do cabo de rede se danifique \cite{alecrim2008site}.
 
 Usuários móveis precisam transferir dados para seus dispositivos sem depender da infraestrutura de comunicação cabeada tradicional \cite{tanenbaum2011}. A resposta para esses usuários está na comunicação sem fios. Dentro das comunicações \textit{wireless}, as LANs sem fio oferecem uma alternativa bastante interessante como meio de acesso à Internet.
 
@@ -25,14 +25,14 @@ Assim como telefones celulares, televisões e rádios, uma rede Wi-Fi usa ondas 
 
 Para que os dados possam ser enviados, o adaptador de rede do cliente os converte em sinal de rádio e os transmite através de uma antena. O ponto de acesso recebe o sinal e o decodifica para então enviá-los para a Internet usando uma conexão Ethernet física com fio padrão \cite{brain2001}.
 
-O processo inverso também funciona, com a estação-base recebendo dados da Internet, convertendo-os em um sinal de rádio e enviando-os ao adaptador sem fio do dispositivo de destino \cite{brain2001}.
+O processo inverso também funciona, com a ponto de acesso recebendo dados da Internet, convertendo-os em um sinal de rádio e enviando-os ao adaptador sem fio do dispositivo de destino \cite{brain2001}.
 Para que uma rede Wi-Fi exista e funcione como descrito anteriormente são necessários alguns componentes que desempenham funções fundamentais, tais como:
 
 \begin{compactitem}
 	\item Hospedeiros sem fio: são os dispositivos finais que utilizam os serviços providos pelo ponto de acesso (definido mais adiante). Um hospedeiro sem fio pode ser um \textit{notebook}, um \textit{tablet}, um \textit{smartphone} ou um computador de mesa compatível \cite{kurose2013};
-	\item Estação-base (ou ponto de acesso): as estações-base são partes fundamentais da infraestrutura de uma rede sem fio, elas possuem a responsabilidade de coordenar as transmissões dos hospedeiros a elas associadas \cite{kurose2013};
+	\item Ponto de acesso (ou estação-base): os pontos de acesso são partes fundamentais da infraestrutura de uma rede sem fio, eles possuem a responsabilidade de coordenar as transmissões dos hospedeiros a eles associadas \cite{kurose2013};
 	\item Enlaces sem fio: são responsáveis pela comunicação dos hospedeiros com a ponto de acesso por meio de um enlace de rádio, podem possuir taxas, distância e frequência de transmissão diferentes \cite{kurose2013};
-	\item Infraestrutura de rede: cada estação-base está conectada a uma rede maior. Além disso, toda a comunicação é feita entre a estação-base e um hospedeiro sem fio através de um único salto sem fio, ou seja, sem nós intermediários \cite{kurose2013}.
+	\item Infraestrutura de rede: cada ponto de acesso está conectada a uma rede maior. Além disso, toda a comunicação é feita entre a ponto de acesso e um hospedeiro sem fio através de um único salto sem fio, ou seja, sem nós intermediários \cite{kurose2013}.
 \end{compactitem}
 
 A disposição dos elementos descritos anteriormente pode ser vista na \autoref{fig:elementos-rede}.
@@ -69,7 +69,7 @@ O outro modo, mostrado na \autoref{fig:topologias}(b), é um exemplo de rede \te
 \section{Arquitetura da LAN sem Fio 802.11}
 \label{arquitetura-802-11}
 
-Um sistema de LAN sem fio Wi-Fi geralmente consiste em dois tipos de nós: clientes e pontos de acesso. O ponto de acesso (\autoref{fig:ap}), também chamado de roteador sem fio é o ponto central de qualquer rede sem fio. O ponto de acesso conecta todos os equipamentos sem fio à rede tradicional cabeada, onde está a conexão com a Internet.
+Um sistema de LAN sem fio Wi-Fi geralmente consiste em dois tipos de nós: clientes e pontos de acesso. O ponto de acesso (\autoref{fig:ap}), chamado de roteador sem fio é o ponto central de qualquer rede sem fio. O ponto de acesso conecta todos os equipamentos sem fio à rede tradicional cabeada, onde está a conexão com a Internet.
 
 \begin{figure}[H]
 	\centering
@@ -133,12 +133,12 @@ Entretanto, para que os equipamentos pudessem se comunicar entre si, deveriam us
 \subsection{IEEE 802.11b}
 \label{subsec:802-11b}
 
-O padrão 802.11b foi o primeiro padrão IEEE 802.11 aprovado a se popularizar em setembro de 1999. Ele opera na faixa entre 2,4 e 2,4835 GHz e tem a possibilidade de estabelecer conexões nas seguintes velocidades de transmissão: 1 Mbps, 2 Mbps, 5.5 Mbps e 11 Mbps \cite{moraes2010,fluminense2010}. \textcolor{blue}{Em ambientes fechados, o IEEE 802.11b consegue ter um alcance de cerca de 35 metros, já para locais abertos pode chegar a 140 metros de cobertura.}
+O padrão 802.11b foi o primeiro padrão IEEE 802.11 aprovado a se popularizar em setembro de 1999. Ele opera na faixa entre 2,4 e 2,4835 GHz e tem a possibilidade de estabelecer conexões nas seguintes velocidades de transmissão: 1 Mbps, 2 Mbps, 5.5 Mbps e 11 Mbps \cite{moraes2010,fluminense2010}. Em ambientes fechados, o IEEE 802.11b consegue ter um alcance de cerca de 35 metros, já para locais abertos pode chegar a 140 metros de alcance.
 
 \subsection{IEEE 802.11a}
 \label{802-11a}
 
-O padrão 802.11a foi lançado no mesmo ano que o 802.11b e, apesar de oferecer taxas mais altas, não alcançou a mesma popularidade. As taxas adicionais oferecidas pela emenda “a” são: 6 Mbps, 9 Mbps, 12 Mbps, 18 Mbps, 24 Mbps, 36 Mbps, 48 Mbps e 54 Mbps.
+O padrão 802.11a foi lançado no mesmo ano que o 802.11b e, apesar de oferecer taxas mais altas, não alcançou a mesma popularidade. As taxas adicionais oferecidas pela emenda ``a'' são: 6 Mbps, 9 Mbps, 12 Mbps, 18 Mbps, 24 Mbps, 36 Mbps, 48 Mbps e 54 Mbps.
 
 As frequências utilizadas por este padrão estão entre 5,725 e 5,875 GHz. Nesta faixa de frequência mais alta, o sinal é mais suscetível a perdas de propagação, diminuindo seu alcance em comparação com a faixa utilizada pelo IEEE 802.11b. Em contrapartida, o uso desta frequência pode ser atraente por estar menos sujeita a interferência de outras fontes. Não existe compatibilidade entre o 802.11a e o 802.11b, pois eles operam em duas faixas de frequência distintas \cite{moraes2010,fluminense2010}.
 
@@ -156,7 +156,7 @@ O desenvolvimento do padrão 802.11n foi iniciado em 2004 e publicado em 2009. E
 \label{subsec:802-11ac}
 
 O padrão IEEE 802.11ac foi desenvolvido entre 2011 e 2013 e publicado em dezembro de 2013. Pode ser considerado como o sucessor, em termos de taxa de transmissão, do IEEE 802.11n \cite{alecrim2008site}.
-A principal vantagem do 802.11ac está em sua velocidade, estimada em até 433 Mbps no modo mais simples. Mas, teoricamente, é possível fazer a rede superar os 6 Gbps em uma configuração que utiliza múltiplas antenas transmissoras (no máximo, oito antenas podem ser utilizadas). Pelo fato dos equipamentos comumente saírem de fábrica com três antenas, a taxa máxima de transmissão é de aproximadamente de 1,3 Gbps \cite{alecrim2008site}.
+A principal vantagem do 802.11ac está em sua velocidade, estimada em até 433 Mbps no modo mais simples. Mas, teoricamente, é possível fazer a rede superar os 6 Gbps em uma configuração que utiliza múltiplas antenas transmissoras (no máximo, oito antenas podem ser utilizadas). Pelo fato dos equipamentos comumente saírem de fábrica com três antenas, a taxa máxima de transmissão é de aproximadamente 1,3 Gbps \cite{alecrim2008site}.
 
 O 802.11ac trabalha na frequência de 5 GHz, sendo que, dentro desta faixa, cada canal pode ter, por padrão, largura de 80 MHz ou 160 MHz como opcional. Além disso, o 802.11ac possui técnicas de modulação avançadas. Precisamente, o padrão trabalha com a técnica MU-MIMO (do inglês, \textit{Multi-User} MIMO), que permite que sejam transferidos e recebidos dados simultaneamente para todos os terminais, o que resulta em uma melhoria nas velocidades de transferência na mesma frequência de operação \cite{alecrim2008site}.
 
@@ -201,7 +201,7 @@ A visão resumida dos padrões IEEE 802.11 apresentados anteriormente é mostrad
 
 Caso surja a necessidade de se planejar a conexão de dispositivos em escritório, residência ou \textit{campus} em uma rede, a implantação da tecnologia Wi-Fi é a solução mais fácil e rápida. A implantação adequada dos componentes básicos (pontos de acesso, cabos e conectores) e a sintonia entre eles é o principal requisito para uma comunicação eficiente e rápida entre os terminais \cite{kar2018ieee}. Para obter um desempenho otimizado de uma LAN sem fio Wi-Fi, é essencial realizar o \textit{site survey} e o planejamento de radiofrequência antes da implantação.
 
-Porém, é importante salientar que uma rede sem fio jamais chega ao mesmo nível de performance da rede cabeada tradicional \cite{moraes2010}. Consideremos também que o meio não guiado e a frequência são compartilhados: quanto mais estações conectadas, menor o desempenho final da rede.
+Porém, é importante salientar que uma rede sem fio jamais chega ao mesmo nível de performance da rede cabeada tradicional \cite{moraes2010}. Também é importante considerar que o meio não guiado e a frequência são compartilhados: quanto mais estações conectadas, menor o desempenho final da rede.
 
 \subsection{Site Survey}
 \label{subsec:site-survey}
@@ -212,8 +212,16 @@ O \textit{site survey} é uma ferramenta indispensável para detectar e ultrapas
 
 No caso específico das redes Wi-Fi, além das condições arquitetônicas do local, a inspeção deve contemplar a análise de possíveis fontes de interferência de radiofrequência, níveis e condições de propagação do sinal, área de cobertura (ou sem cobertura), servindo como fonte adicional de informação para o projeto de posicionamento dos pontos de acesso \cite{pinheiro2004site}. 
 
-\textcolor{blue}{Os dados obtidos no \textit{site survey} são usados para estimar o orçamento de recursos técnicos, como requisitos de \textit{hardware}, largura de banda e fontes de energia.
-Em seguida, no planejamento de radiofrequência (RF) ajustes finais são feitos na rede para obter um desempenho otimizado em seus parâmetros mais importantes, como capacidade de cobertura e distribuição da largura de banda entre as células \cite{kar2018ieee}. Por fim, na implantação, é feito o processo de instalação dos pontos de acesso, fontes de alimentação, cabos, conectores, etc. Uma pesquisa ativa de pós-implantação pode ser realizada para detectar falhas de cobertura e falhas de largura de banda no sistema \cite{kar2018ieee}. A sequência completa de etapas do \textit{site survey} em redes \textit{wireless} está ilustrada pelo fluxograma da \autoref{fig:fluxograma-site-survey}.}
+Os dados obtidos no \textit{site survey} são usados para estimar o orçamento de recursos técnicos, como requisitos de \textit{hardware}, largura de banda e fontes de energia.
+Em seguida, no planejamento de radiofrequência (RF) ajustes finais são feitos na rede para obter um desempenho otimizado em seus parâmetros mais importantes, como:
+
+\begin{compactitem}
+\item Capacidade de cobertura: quando existe um grande número de pontos de acesso implantados na mesma área, é iminente o surgimento de interferência originadas das outras redes e de canal adjacente. O planejamento de capacidade é essencial para a implantação de LANs sem fio em grandes áreas como \textit{campus} universitários, aeroportos, \textit{shoppings}, etc. \cite{kar2018ieee}.
+  
+\item Distribuição da largura de banda: aplicações diferentes tem exigência de largura de banda diferente. O requisito típico de largura de banda para navegação na Web é de 500 kbps, enquanto um processo de videoconferência pode precisar de 2 a 4 Mbps \cite{kar2018ieee}. Uma vez que tais requisitos sejam conhecidos, é possível estimar a largura de banda total necessária para a área de cobertura completa. Portanto, é calculado a necessidade total de largura de banda e sua distribuição em diferentes células de acordo com a demanda exigida pelos clientes da rede \cite{kar2018ieee}.
+\end{compactitem}
+
+Por fim, na implantação, é feito o processo de instalação e configuração dos pontos de acesso, fontes de alimentação, cabos, conectores, etc. Uma pesquisa ativa de pós-implantação pode ser realizada para detectar falhas de cobertura e falhas de largura de banda no sistema \cite{kar2018ieee}. A sequência completa de etapas do \textit{site survey} em redes \textit{wireless} está ilustrada pelo fluxograma da \autoref{fig:fluxograma-site-survey}.
 
 \begin{figure}[H]
 	\centering
@@ -231,9 +239,9 @@ O problema encontrado com maior frequência em redes sem fio é a degradação d
 
 O processo de pesquisa do local pode ser executado manualmente ou usando um \textit{software} dedicado. A pesquisa manual consiste essencialmente de uma avaliação baseada em \textit{hardware} posteriormente a implantação da rede, enquanto a pesquisa preditiva do local, além da pesquisa em si, inclui o planejamento baseado em simulação computacional \cite{kar2018ieee}.
 
-É possível classificar o \textit{site survey} para redes sem fio em duas categorias dependendo do tipo de ambiente: (\textit{indoor}) ou (\textit{outdoor}).
+É possível classificar o \textit{site survey} para redes sem fio em duas categorias dependendo do tipo de ambiente: \textit{indoor} ou \textit{outdoor}.
 
-\textit{Site survey indoor}: consiste em realizar a inspeção buscando interferências, localização e número de pontos de acesso. O equipamento utilizado é basicamente um \textit{notebook} provido de um \textit{software} dedicado instalado e configurado. Esse tipo de inspeção fornece gráficos de intensidade de sinais (mapa de calor), o que torna o análise da cobertura mais precisa e clara. Em prédios, a inspeção pode ser executada em apenas um andar ou em múltiplos andares \apud[p.~73]{rodrigues2007}{geier2002}.
+\textit{Site survey indoor}: consiste em realizar a inspeção buscando interferências, localização e número de pontos de acesso. O equipamento utilizado é basicamente um \textit{notebook} provido de um \textit{software} dedicado instalado e configurado. Esse tipo de inspeção fornece gráficos de intensidade de sinais (mapa de calor), o que torna a análise da cobertura mais precisa e clara. Em prédios, a inspeção pode ser executada em apenas um andar ou em múltiplos andares \apud[p.~73]{rodrigues2007}{geier2002}.
 
 \textit{Site survey outdoor}: consiste em realizar a inspeção de redes \textit{wireless} em uma escala muito maior que a existente na modalidade \textit{indoor}. Além da localização e posição de pontos de acesso e das antenas de transmissão de grande porte, verifica-se a existência de linha de visada direta ou não com o fonte transmissora \cite{pinheiro2004site}. Essa modalidade de inspeção produz mapas de calor com maior complexidade de análise, devido às dimensões do terreno, da variabilidade do relevo e da grande quantidade de fontes de interferência \apud[p.~73]{rodrigues2007}{geier2002}.
 
@@ -334,7 +342,7 @@ O Xirrus Wi-Fi Inspector é um \textit{software} de análise direcionado princip
 	\centering
 	\Caption{\label{fig:xirrus-wifi}Tela principal do Xirrus Wi-Fi Inspector.}	
 	\UECEfig{}{
-		\includegraphics[scale=.27]{figuras/inspector_layout_Riverbed.png}
+		\includegraphics[scale=.27]{figuras/xirrus.png}
 	}{
 		\Fonte{\citeonline{Xirrus}.}
 	}
