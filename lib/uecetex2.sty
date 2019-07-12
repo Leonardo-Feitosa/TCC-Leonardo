@@ -906,65 +906,77 @@
 }
 
 % FOLHA DE APROVAÇÃO TCC
-\newcommand{\imprimirfolhadeaprovacaotcc}{
-	
-	\begin{center}
-		%\vspace*{-1.8cm}
-		\MakeUppercase{\imprimirautor}\par
-		\vspace{3\onelineskip}
-		\MakeUppercase{\imprimirtitulo}
-	\end{center}
-	
-	\vspace{2\onelineskip}
-	
-	%Retira o espaço do parágrafo
-	\hspace*{-1.3cm}
-	%Adiciona o espaço da margem
-	\hspace*{8cm}	
-	\begin{minipage}{8cm}
-		\begin{SingleSpace}
-			\imprimirpreambulo \\			
-		\end{SingleSpace}		
-	\end{minipage}
-
-	\vspace{\onelineskip}
-		
-	\noindent Aprovado em: %\rule{1cm}{.8pt}/\rule{1cm}{.8pt}/\rule{1cm}{.8pt}%\imprimirdataaprovacao
-	
-	\vspace{\onelineskip}
-	
-	\begin{center}
-		BANCA EXAMINADORA
-	\end{center}
-	
-		%\vspace{\onelineskip}
-
-	% Membro Um da banca é sempre o Orientador
-	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}
-	
-	% Membro Dois da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimircoorientador}{
-		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
-	}
-	
-	% Membro Três da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimirmembrodabancadois}{
-		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
-	}
-		
-	% Membro Três da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimirmembrodabancatres}{
-		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
-	}
-	
-	% Membro Quatro da banca pode ser o coorientador ou outro membro
-	\ifnotempty{\imprimirmembrodabancaquatro}{
-		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
-	}	
-	
-	\pagebreak
-}
-
+% ===============================================================================
+% Caso o trabalho já tenha sido aprovado manter os camandos abaixo para incluir a 
+% FOLHA DE APROVAÇÃO DIGITALIZADA
+% ===============================================================================
+\newcommand{\imprimirfolhadeaprovacaotcc}[1]{%
+		\ifthenelse{\boolean{uecetex2@ehqualificacao}}{}{%
+			\includepdf[pages=1]{#1} %
+		}%
+	}%
+% ===========================================================================
+% Caso o trabalho ainda não tenha sido aprovado descomentar o bloco de código
+% abaixo até \newcommand{\imprimirfolhadeaprovacao}
+% ===========================================================================
+%\newcommand{\imprimirfolhadeaprovacaotcc}{%
+%	\begin{center}
+%		%\vspace*{-1.8cm}
+%		\MakeUppercase{\imprimirautor}\par
+%		\vspace{3\onelineskip}
+%		\MakeUppercase{\imprimirtitulo}
+%	\end{center}
+%	
+%	\vspace{2\onelineskip}
+%	
+%	%Retira o espaço do parágrafo
+%	\hspace*{-1.3cm}
+%	%Adiciona o espaço da margem
+%	\hspace*{8cm}	
+%	\begin{minipage}{8cm}
+%		\begin{SingleSpace}
+%			\imprimirpreambulo \\			
+%		\end{SingleSpace}		
+%	\end{minipage}
+%
+%	\vspace{\onelineskip}
+%		
+%	\noindent Aprovado em: %\rule{1cm}{.8pt}/\rule{1cm}{.8pt}/\rule{1cm}{.8pt}%\imprimirdataaprovacao
+%	
+%	\vspace{\onelineskip}
+%	
+%	\begin{center}
+%		BANCA EXAMINADORA
+%	\end{center}
+%	
+%		%\vspace{\onelineskip}
+%
+%	% Membro Um da banca é sempre o Orientador
+%	\assinatura{\imprimirorientador\  \artigoorientadorcomparenteses \\ \imprimirorientadories}
+%	
+%	% Membro Dois da banca pode ser o coorientador ou outro membro
+%	\ifnotempty{\imprimircoorientador}{
+%		\assinatura{\imprimircoorientador\ \artigocoorientadorcomparenteses \\ \imprimircoorientadories}
+%	}
+%	
+%	% Membro Três da banca pode ser o coorientador ou outro membro
+%	\ifnotempty{\imprimirmembrodabancadois}{
+%		\assinatura{\imprimirmembrodabancadois \\ \imprimirmembrodabancadoisies}
+%	}
+%		
+%	% Membro Três da banca pode ser o coorientador ou outro membro
+%	\ifnotempty{\imprimirmembrodabancatres}{
+%		\assinatura{\imprimirmembrodabancatres \\ \imprimirmembrodabancatresies}
+%	}
+%	
+%	% Membro Quatro da banca pode ser o coorientador ou outro membro
+%	\ifnotempty{\imprimirmembrodabancaquatro}{
+%		\assinatura{\imprimirmembrodabancaquatro \\ \imprimirmembrodabancaquatroies}
+%	}	
+%	
+%	\pagebreak
+%}
+%
 \newcommand{\imprimirfolhadeaprovacao}{
 	\ifthenelse{\boolean{uecetex2@ehdissertacao}}{ %
     	\imprimirfolhadeaprovacaodissertacao %	
