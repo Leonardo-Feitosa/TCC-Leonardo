@@ -9,7 +9,7 @@ Visando uma melhor execução, a metodologia \textit{site survey} foi implementa
 	
 	\item \textbf{Coleta de dados:} com o auxílio de \textit{softwares}, medidas de potência foram capturadas em diversos pontos do prédio e posteriormente marcados na planta baixa do prédio.
 	
-	\item \textbf{Tratamento dos dados:} depois de coletados os dados do ambiente \textit{wireless}, os mesmos foram tratados a fim de filtrar quais seriam úteis para a proposta do trabalho.
+	\item \textbf{Tratamento dos dados:} depois de coletados, os dados foram tratados a fim de filtrar quais seriam úteis para a proposta do trabalho.
 	
 	\item \textbf{Geração dos mapas de calor:} representações gráficas da cobertura de rádio do ponto de acesso foram feitas para demonstrar onde o sinal sofria maiores perdas.
 \end{compactitem}
@@ -73,7 +73,7 @@ As configurações que podem ser encontradas nos pontos de acesso variam de equi
 \subsection{Software}
 \label{subsec:softwares-utiliados}
 
-Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitam avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper).
+Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitam avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper). \textcolor{blue}{A escolha por estes programas se deu pelo fato de serem gratuitos, estáveis, e por não exigirem muitos recursos computacionais.}
 
 Além de ser gratuito, o Xirrus Wi-Fi Inspector apresenta uma interface amigável para a visualização das redes Wi-Fi disponíveis. Além disso, a página principal dele exibe quatros campos diferentes que podem ser expandidos para uma visualização mais detalhada: \textit{Radar}, \textit{History}, \textit{Connection} e \textit{Networks}. Cada um possui algumas funções específicas, mas para a proposta deste trabalho, apenas o campo \textit{Networks} foi explorado, já que esta janela exibe as informações minuciosas das redes detectadas em determinada área (\autoref{fig:software-xirrus}).
 
@@ -208,6 +208,8 @@ As medições ocorreram em 18 de maio de 2019 (sábado), pelo fato de que nesta 
 
 A \autoref{fig:pontos-andar2} mostra os 62 pontos marcados no segundo andar do Bloco Didático, cada ponto vermelho na figura significa um local que foi medido a potência de sinal da rede Wi-Fi. Já a \autoref{fig:pontos-andar1} apresenta todos os 50 pontos que foram medidos no primeiro andar do mesmo prédio. Para cada ponto de medição um tempo entre 30 e 60 segundos foi gasto com a finalidade de gerar um valor médio para a potência recebida naquele determinado ponto, pois o sinal sem fio sofre com flutuações rápidas, logo seu valor instantâneo pode não condizer com a realidade do local de medição.
 
+\textcolor{blue}{A quantidade de pontos medidos nos dois andares compreende suficientemente toda a área útil do prédio. A localização de cada ponto procurou quantificar a potência do sinal em todos os locais com diferentes condições arquitetônicas para assim tornar os resultados os mais completos e precisos possíveis.}
+
 \begin{figure}[H]
 	\centering
 	\Caption{\label{fig:pontos-andar2}Pontos de medida no 2º andar do Bloco Didático.}	
@@ -231,7 +233,7 @@ A \autoref{fig:pontos-andar2} mostra os 62 pontos marcados no segundo andar do B
 \subsection{Tratamento dos dados}
 \label{subsec:tratamento-dos-dados}
 
-Após a coleta dos dados das redes sem fio detectadas no Bloco Didático, iniciou-se a etapa de tratamento dos mesmos, no qual foram analisados e depois utilizados filtros para definir quais dados das redes capturadas seriam aproveitados.
+Após a coleta dos dados das redes sem fio detectadas no Bloco Didático, iniciou-se a etapa de tratamento dos mesmos, no qual foram analisados e depois utilizados filtros para definir quais dados das redes capturadas seriam aproveitados. \textcolor{blue}{Com o auxílio do Xirrus Wi-Fi Inspector, foram selecionadas informações que indicassem a frequência de operação e o canal utilizado pelos pontos de acesso com o objetivo de identificar interferências entre redes dentro da mesma área de cobertura.}
 
 A \autoref{fig:networks-didatico} mostra a lista criada no Xirrus Wi-Fi Inspector com as características dos pontos de acessos detectados na varredura no segundo andar do Bloco Didático. A princípio, ao ser gerada a lista, são exibidos o SSID e o nível do sinal das redes, e também são disponibilizadas informações como canal, protocolo de segurança, padrão 802.11 utilizado e o fabricante do equipamento.
 
@@ -318,7 +320,7 @@ Logo, para que a rede IFCE\_Teste tenha uma cobertura de sinal por todo o primei
 
 Os resultados encontrados no presente estudo evidenciam que a metodologia \textit{site survey} contribuiu significamente na avaliação da qualidade do sinal da rede Wi-Fi do Bloco Didático do IFCE Tauá, demonstrando que os dois andares mapeados apresentam níveis de propagação de radiofrequência distintos. Isso se deve ao fato de cada um dos andares possui diferentes estruturas arquitetônicas, o que influencia diretamente no alcance máximo de cada célula instalada.
 	
-Existe dois pontos de acesso disponíveis exclusivamente para atender o prédio, sendo um destinado aos docentes e o outro aos discentes, ambos instalados no mesmo local (sala de coordenação). Por estarem tão próximos, a cobertura de cada ponto de acesso não é adequadamente distribuída pela área, as duas zonas de serviço se sobrepõem. Porém, não há problemas de interferência entre as redes Wi-Fi, já que a rede com SSID IFCE\_Teste opera na banda de frequência de 2.4 GHz e a rede com SSID IFCE\_PROFESSORES trabalha em 5 GHz, como mostra a captura de tela da \autoref{fig:networks-didatico}. Ainda na \autoref{fig:networks-didatico} percebe-se que a rede IFCE\_PROFESSORES pode sofrer com interferências de outras redes que operam na mesma faixa de frequência e se encontram instaladas no bloco principal do \textit{campus} mas que são detectadas no Bloco Didático.
+Existem dois pontos de acesso disponíveis exclusivamente para atender o prédio, sendo um destinado aos docentes e o outro aos discentes, ambos instalados no mesmo local (sala de coordenação). Por estarem tão próximos, a cobertura de cada ponto de acesso não é adequadamente distribuída pela área, as duas zonas de serviço se sobrepõem. Porém, não há problemas de interferência entre as redes Wi-Fi, já que a rede com SSID IFCE\_Teste opera na banda de frequência de 2.4 GHz e a rede com SSID IFCE\_PROFESSORES trabalha em 5 GHz, como mostra a captura de tela da \autoref{fig:networks-didatico}. Ainda na \autoref{fig:networks-didatico} percebe-se que a rede IFCE\_PROFESSORES pode sofrer com interferências de outras redes que operam na mesma faixa de frequência e se encontram instaladas no bloco principal do \textit{campus} mas que são detectadas no Bloco Didático.
 
 No mapa de calor gerado para o segundo andar do Bloco Didático (\autoref{fig:heatmapper-andar2}) observa-se a predominância de tons de verde na região central do piso. Isso quer dizer que nesse local o nível de potência recebido é forte para o estabelecimento de conexões de alta velocidade com a Internet. A medida que a distância de análise aumenta em relação ao ponto de acesso, as cores mudam para amarelo e laranja informando que nesses pontos a qualidade do sinal Wi-Fi diminuiu consideravelmente. Se for considerado as áreas livres de barreiras, como os corredores, a atenuação sofrida pelo \textit{link} de rádio é gradual, causada pela perda de espaço livre durante o percurso. As regiões mais extremas do mapa são as que mais perdem sinal em função da distância até o ponto de acesso, principalmente a parte superior, entretanto, no canto inferior direito o formato da zona laranja difere bastante da superior direita. Nesse local a mancha de perda concentra-se quase que unicamente na sala de aula. Analisando a imagem, observa-se que entre o ponto de acesso e a referida zona existe a presença do elevador. Por ser constituído de metal, este obstáculo absorve grande parte da energia da onda de rádio, o que prejudica sua propagação. Além disso, por ser um ambiente \textit{indoor}, é importante ponderar as perdas causadas ao sinal pela penetração da ondas de rádio em paredes: quanto mais barreiras maior a degradação. O material utilizado na construção da parede também pesa contra a propagação eletromagnética.
 
