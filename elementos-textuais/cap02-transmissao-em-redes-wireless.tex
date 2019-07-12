@@ -77,12 +77,12 @@ Diferentemente dos enlaces físicos, o caminho de uma onda de rádio entre trans
 
 Portanto, o estudo da propagação dos sinais de radiofrequência é importante para a compreensão das comunicações sem fio porque fornece a modelagem física necessária, o que resulta em uma boa estimativa de potência requerida para o estabelecimento do enlace de comunicação para que haja comunicação confiável \cite{haykin2008}. Além disso, o estudo da propagação auxilia na compreensão das técnicas de recepção para compensação das perdas introduzidas pela transmissão sem fio \cite{haykin2008}.
 
-Os efeitos sofridos pela onda eletromagnética ao se propagar são diversos, mas os principais e mais importantes são a absorção, a reflexão, a difração, a refração, o desvanecimento e a interferência \cite{flickenger2008,haykin2008,rappaport2009}.
+Os efeitos sofridos pela onda eletromagnética ao se propagar são diversos, mas os principais são a absorção, a reflexão, a difração, a refração, o desvanecimento e a interferência \cite{flickenger2008,haykin2008,rappaport2009}.
 
 \subsection{Absorção}
 \label{sub:absorcao}
 
-Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou dissipam-se totalmente, como ilustra a \autoref{fig:absorcao}. O quanto elas perdem de potência irá depender de sua frequência e do material em que penetram \cite{flickenger2008}. Em analogia, janelas de vidro são transparentes para a luz, enquanto o vidro usado em óculos de sol filtram uma boa quantidade da intensidade da luz e também da radiação ultravioleta.
+Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou dissipam-se totalmente, como ilustra a \autoref{fig:absorcao}. O quanto elas perdem de potência irá depender de sua frequência e do material em que penetram \cite{flickenger2008}.
 
 \begin{figure}[H]
 	\centering
@@ -97,11 +97,9 @@ Quando ondas eletromagnéticas penetram algum objeto, elas geralmente atenuam ou
 Para ondas de rádio, os dois principais materiais absorventes são \cite{flickenger2008}:
 
 \begin{compactitem}
-	\item Metal. Elétrons podem mover-se livremente em metais, sendo prontamente capazes de oscilar e absorver a energia de uma onda que incida sobre eles.
-	\item Água. Ondas de rádio fazem com que as moléculas de água agitem-se, tomando parte da energia da onda.
+	\item metais: elétrons podem mover-se livremente em metais, sendo prontamente capazes de oscilar e absorver a energia de uma onda que incida sobre eles.
+	\item água: ondas de rádio fazem com que as moléculas de água agitem-se, tomando parte da energia da onda.
 \end{compactitem}
-
-Em termos práticos de redes sem fio, os metais e a água são considerados como excelentes absorventes: as ondas de rádio não serão capazes de atravessá-los com facilidade \cite{flickenger2008}.
 
 \subsection{Reflexão}
 \label{sub:reflexao}
@@ -124,9 +122,7 @@ Nas comunicações sem fio terrestres, normalmente não existe uma linha de visa
 \subsubsection{Multipercurso}
 \label{subsec:multipercurso}
 
-Ainda que as regras de reflexão sejam relativamente simples, a situação pode se complicar quando se imagina o interior de um escritório particionado e objetos metálicos das mais variadas formas e tamanhos. O mesmo se aplica aos ambientes urbanos, já que estes apresentam construções de concreto, árvores, veículos e um intenso fluxo de pessoas circulando pelas ruas.
-
-Nessas áreas densamente ocupadas, a maior parte da comunicação acontece por espalhamento das ondas eletromagnéticas ao chocarem-se contra a superfície das construções e objetos ao redor, como pode ser visto na \autoref{fig:multipath} \cite{haykin2008}.  Esses percursos de propagação múltiplos são conhecidos como multipercurso ou multicaminho. Até mesmo quando existe uma linha de visão direta, o multipercurso ainda ocorre devido às reflexões no solo e nas estruturas próximas a estação móvel \cite{rappaport2009}.
+Ainda que as regras de reflexão sejam relativamente simples, a situação se torna mais complexa por espalhamento das ondas eletromagnéticas ao chocarem-se contra a superfície das construções e objetos ao redor, como pode ser visto na \autoref{fig:multipath} \cite{haykin2008}.  Esses percursos de propagação múltiplos são conhecidos como multipercurso ou multicaminho. Até mesmo quando existe uma linha de visão direta, o multipercurso ainda ocorre devido às reflexões no solo e nas estruturas próximas a estação móvel \cite{rappaport2009}.
 
 \begin{figure}[H]
 	\centering
@@ -229,7 +225,7 @@ Existem diversos modelos de propagação formulados por estudiosos e organizaç�
 \subsection{Modelo de propagação no espaço livre}
 \label{sub:espaco-livre}
 
-O modelo de propagação no espaço livre é usado para prever a intensidade do sinal recebido quando o transmissor e o receptor possuem um linha de visão sem a presença de obstáculos, ou seja, um caminho livre entre eles \cite{rappaport2009}. Os sistemas de comunicação via satélite normalmente experimentam uma transmissão com caminho desobstruído.
+O modelo de propagação no espaço livre é usado para prever a intensidade do sinal recebido quando o transmissor e o receptor possuem um linha de visada, ou seja, um caminho livre entre eles \cite{rappaport2009}. Os sistemas de comunicação via satélite normalmente experimentam uma transmissão com caminho desobstruído.
 
 O modelo de espaço livre, assim como a maioria dos modelos de propagação de radiofrequência, prevê que a potência recebida diminui em função da distância de separação transmissor-receptor (T-R) \cite{rappaport2009}. A potência no espaço livre recebida por uma antena receptora que está separada de uma antena transmissora, irradiando, por uma distância T-R é dada pela equação do espaço livre:
 
