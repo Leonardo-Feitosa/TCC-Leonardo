@@ -73,7 +73,7 @@ As configurações que podem ser encontradas nos pontos de acesso variam de equi
 \subsection{Software}
 \label{subsec:softwares-utiliados}
 
-Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitam avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper). \textcolor{blue}{A escolha por estes programas se deu pelo fato de serem gratuitos, estáveis, e por não exigirem muitos recursos computacionais.}
+Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitam avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper). \textcolor{blue}{A escolha por estes programas se deu pelo fato de serem gratuitos, estáveis, e por não exigirem elevados recursos computacionais.}
 
 Além de ser gratuito, o Xirrus Wi-Fi Inspector apresenta uma interface amigável para a visualização das redes Wi-Fi disponíveis. Além disso, a página principal dele exibe quatros campos diferentes que podem ser expandidos para uma visualização mais detalhada: \textit{Radar}, \textit{History}, \textit{Connection} e \textit{Networks}. Cada um possui algumas funções específicas, mas para a proposta deste trabalho, apenas o campo \textit{Networks} foi explorado, o qual exibe as informações minuciosas das redes detectadas em determinada área (\autoref{fig:software-xirrus}).
 
@@ -104,17 +104,17 @@ Na janela \textit{Networks} são apresentadas algumas informações dos pontos d
 	
 Já para a criação de mapas de calor dos sinais de radiofrequência, o programa utilizado foi o Ekahau HeatMapper. Com ele é possível descobrir a cobertura de uma rede Wi-Fi padrão 802.11n/b/g a partir da visualização do mapa de calor obtido na coleta de dados em diversos pontos espalhados pelo local.
 
-O programa possibilita ao usuário escolher um arquivo de seu computador que representa a planta baixa do ambiente de interesse, para assim marcar os pontos onde as medidas de potência foram capturadas e posteriormente a coloração. Cada cor exibida pelo \textit{software} significa a intensidade de potência do sinal recebido em certo ponto, variando do verde (sinal forte) até o vermelho (sinal fraco). Além disso, as marcações retilíneas em verde indicam o percurso feito pelo \textit{notebook} durante o mapeamento enquanto os pontos apontam o local de coleta de medidas. Todos esses detalhes são ilustrados pela \autoref{fig:software-ekahau}.
+O programa possibilita ao usuário escolher um arquivo de seu computador que representa a planta baixa do ambiente de interesse, para assim marcar os pontos onde as medidas de potência foram capturadas e posteriormente a coloração. Cada cor exibida pelo \textit{software} significa a intensidade de potência do sinal recebido em certo ponto, variando do verde (sinal forte) até o vermelho (sinal fraco). Além disso, as marcações retilíneas em verde indicam o percurso feito pelo \textit{notebook} durante o mapeamento enquanto os pontos apontam o local de coleta de medidas. %Todos esses detalhes são ilustrados pela \autoref{fig:ekahau}.
 
-\begin{figure}[H]
-	\centering
-	\Caption{\label{fig:software-ekahau}Geração do mapa de calor no Ekahau HeatMapper.}	
-	\UECEfig{}{
-		\includegraphics[scale=.5]{figuras/ekahau-heatmapper.jpg}
-	}{
-		\Fonte{\citeonline{Ekahau2019}.}
-	}	
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\Caption{\label{fig:software-ekahau}Geração do mapa de calor no Ekahau HeatMapper.}	
+%	\UECEfig{}{
+%		\includegraphics[scale=.5]{figuras/ekahau-heatmapper.jpg}
+%	}{
+%		\Fonte{\citeonline{Ekahau2019}.}
+%	}	
+%\end{figure}
 
 \subsection{Hardware}
 \label{subsec:equipamento-utilizado}
@@ -284,7 +284,10 @@ Com a ferramenta de \textit{software} Ekahau HeatMapper foram gerados dois mapas
 
 Por questões de autorização, apenas na rede destinada aos discentes (SSID IFCE\_Teste) foram feitos os mapas de calor. Pelo fato do ponto de acesso atribuído aos docentes (SSID IFCE\_PROFESSORES) estar localizado próximo ao dos estudantes na sala de coordenação, os mapas de calor resultantes de ambas provavelmente seriam equivalentes, ou seja,  com o mapeamento de apenas uma das redes o mesmo resultado se aplicaria a outra com margem de erro desprezível para caso de verificação da propagação de radiofrequência.
 
-A \autoref{fig:heatmapper-andar2} apresenta visualmente o mapa de calor da rede IFCE\_Teste para o térreo do Bloco Didático, e o maior nível de potência que é recebido é representado por verde e o menor nível de potência recebido é definido pela cor vermelha. Cada pequeno ponto\footnote[6]{Por algum motivo, o programa Ekahau HeatMapper não exibiu certos pontos medidos. No entanto, não houve prejuízos significativos ao resultado final do mapeamento.} verde interligado a outro por um segmento de reta representa o local onde foi efetuada uma medição de sinal.
+A \autoref{fig:heatmapper-andar2} apresenta visualmente o mapa de calor da rede IFCE\_Teste para o térreo do Bloco Didático, e o maior nível de potência que é recebido é representado por verde e o menor nível de potência recebido é definido pela cor vermelha. Cada pequeno ponto verde interligado a outro por um segmento de reta representa o local onde foi efetuada uma medição de sinal.
+
+\textcolor{blue}{Por algum motivo, provavelmente devido a um erro pontual, o programa Ekahau HeatMapper não exibiu a localização de determinados pontos medidos. No entanto, não houve prejuízos significativos ao resultado final do mapeamento do primeiro andar.}
+
 \newpage
 \begin{figure}[H]
 	\centering
