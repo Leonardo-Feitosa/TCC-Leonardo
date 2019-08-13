@@ -405,7 +405,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%             Variáveis               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newcommand{\uf}{\def \@uf}
 \newcommand{\campus}{\def \@campus}
 
 \newcommand{\ies}{\def \@ies}
@@ -450,6 +450,7 @@
 %%        Imprimir as Variáveis        %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\imprimiruf}{\@uf} % estado
 \newcommand{\imprimircampus}{\@campus} %campus
 
 \newcommand{\imprimiries}{\@ies}
@@ -551,9 +552,7 @@
 }
 % TCC
 \newcommand{\preambulotccgraduacao}{
-	%Trabalho de Conclusão de Curso apresentado ao Curso de Graduação em \imprimirgraduacaoem\ do \imprimircentro\ da \imprimiries, 
-	%como requisito parcial à obtenção do grau de \imprimirhabilitacao\ em \imprimirgraduacaoem. \\
-	Trabalho de Conclusão de Curso (TCC) apresentado ao curso de \imprimirgraduacaoem\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará -- IFCE -- \textit{Campus} \imprimircampus\, como requisito parcial para obtenção do título de Tecnólogo em Telemática. \\
+	Trabalho de Conclusão de Curso apresentado ao curso de \imprimirgraduacaoem\ do Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE) -- \textit{Campus} \imprimircampus\, como requisito parcial para obtenção do título de Tecnólogo em Telemática. \\
 }
 
 \newcommand{\preambulotccespecializacao}{
@@ -670,7 +669,7 @@
 		\MakeUppercase{\imprimirtitulo}
 		
 		\vfill
-		\normalsize\MakeUppercase\imprimirlocal\par	
+		\normalsize\MakeUppercase\imprimirlocal\par
 		\normalsize\imprimirdata
 	\end{capa}	
 }
@@ -727,7 +726,7 @@
 	\vfill
 
 	\centering
-	\normalsize\MakeUppercase\imprimirlocal \par
+	\normalsize\MakeUppercase\imprimirlocal\ -- \imprimiruf\par
 	\normalsize\imprimirdata	
 }
 \makeatother
