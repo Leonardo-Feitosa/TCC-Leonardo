@@ -64,7 +64,7 @@ A instituição conta com uma infraestrutura de rede sem fio com vários pontos 
 
 A Internet disponibilizada no IFCE Tauá é acessível tanto para aqueles que estudam na instituição ou trabalham, como também para visitantes, desde que tenham a senha de acesso. A rede sem fio é dividida de forma a atender cada setor que compõe a organização institucional do \textit{campus}. Isso quer dizer que para os frequentadores da biblioteca existe uma rede específica para eles; para os professores da mesma forma. No entanto, não há restrições para que cada categoria de usuários utilize sua rede própria, cada usuário é livre para associar-se a qualquer ponto de acesso disponível, desde que tenha autorização para tal.
 
-As configurações que podem ser encontradas nos pontos de acesso variam de equipamentos que operam na frequência de 2.4 GHz chegando até ao modo \textit{dual band}. \textcolor{blue}{Especificamente, os pontos de acesso empregados na conexão sem fio à Internet no Bloco Didático e também em quase todo o restante do \textit{campus} Tauá são do modelo AC1750 Wireless Dual Band Gigabit Router Archer C7 (\autoref{fig:archer-c7}) da marca comercial TP-Link. Este equipamento pode trabalhar, simultaneamente, nas bandas de 2.4 GHz e 5 GHz, suas especificações \textit{wireless} podem ser vistas na \autoref{tab:roteador-tp-link}.}
+As configurações que podem ser encontradas nos pontos de acesso variam de equipamentos que operam na frequência de 2.4 GHz chegando até ao modo \textit{dual band}. Especificamente, os pontos de acesso empregados na conexão sem fio à Internet no Bloco Didático e também em quase todo o restante do \textit{campus} Tauá são do modelo AC1750 Wireless Dual Band Gigabit Router Archer C7 (\autoref{fig:archer-c7}) da marca comercial TP-Link. Este equipamento pode trabalhar, simultaneamente, nas bandas de 2.4 GHz e 5 GHz, suas especificações \textit{wireless} podem ser vistas na \autoref{tab:roteador-tp-link}.
 
 \begin{figure}[H]
 	\centering
@@ -110,7 +110,7 @@ As configurações que podem ser encontradas nos pontos de acesso variam de equi
 \subsection{Software}
 \label{subsec:softwares-utiliados}
 
-Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitam avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper). \textcolor{blue}{A escolha por estes programas se deu pelo fato de serem gratuitos, estáveis, e por não exigirem elevados recursos computacionais.}
+Para que sejam realizados os testes iniciais de \textit{site survey} numa rede sem fio é necessário a utilização de \textit{software(s)} dedicado(s) que permita(m) capturar as informações necessárias que possibilitam avaliar o funcionamento da rede. Neste trabalho foram utilizados dois \textit{softwares}: um para a visualização das redes disponíveis no local alvo (Xirrus Wi-Fi Inspector) e o outro para a geração dos mapas de intensidade de sinal (Ekahau HeatMapper). A escolha por estes programas se deu pelo fato de serem gratuitos, estáveis, e por não exigirem elevados recursos computacionais.
 
 Além de ser gratuito, o Xirrus Wi-Fi Inspector apresenta uma interface amigável para a visualização das redes Wi-Fi disponíveis. Além disso, a página principal dele exibe quatros campos diferentes que podem ser expandidos para uma visualização mais detalhada: \textit{Radar}, \textit{History}, \textit{Connection} e \textit{Networks}. Cada um possui algumas funções específicas, mas para a proposta deste trabalho, apenas o campo \textit{Networks} foi explorado, o qual exibe as informações minuciosas das redes detectadas em determinada área (\autoref{fig:software-xirrus}).
 
@@ -245,7 +245,7 @@ As medições ocorreram em 18 de maio de 2019 (sábado), pelo fato de que nesta 
 
 A \autoref{fig:pontos-andar2} mostra os 62 pontos marcados no térreo do Bloco Didático. Cada ponto vermelho na figura significa um local que foi medido a potência de sinal da rede Wi-Fi. Já a \autoref{fig:pontos-andar1} apresenta todos os 50 pontos que foram medidos no térreo do mesmo prédio. Para cada ponto de medição, um tempo entre 30 e 60 segundos foi gasto com a finalidade de gerar um valor médio para a potência recebida naquele determinado ponto, pois o sinal sem fio sofre com flutuações rápidas, logo seu valor instantâneo pode não condizer com a realidade do local de medição.
 
-\textcolor{blue}{A quantidade de pontos medidos nos dois andares compreende suficientemente toda a área útil do prédio. A localização de cada ponto procurou quantificar a potência do sinal em todos os locais do prédio com diferentes condições arquitetônicas (no interior das salas, dos banheiros, nos corredores) para assim tornar os resultados os mais completos e precisos possíveis.}
+A quantidade de pontos medidos nos dois andares compreende suficientemente toda a área útil do prédio. A localização de cada ponto procurou quantificar a potência do sinal em todos os locais do prédio com diferentes condições arquitetônicas (no interior das salas, dos banheiros, nos corredores) para assim tornar os resultados os mais completos e precisos possíveis.
 
 \begin{figure}[H]
 	\centering
@@ -270,7 +270,7 @@ A \autoref{fig:pontos-andar2} mostra os 62 pontos marcados no térreo do Bloco D
 \subsection{Tratamento dos dados}
 \label{subsec:tratamento-dos-dados}
 
-Após a coleta dos dados das redes sem fio detectadas no Bloco Didático, iniciou-se a etapa de tratamento dos mesmos, no qual foram analisados e depois utilizados filtros para definir quais dados das redes capturadas seriam aproveitados. \textcolor{blue}{Com o auxílio do Xirrus Wi-Fi Inspector, foram selecionadas informações que indicassem a frequência de operação e o canal utilizado pelos pontos de acesso com o objetivo de identificar interferências entre redes dentro da mesma área de cobertura.}
+Após a coleta dos dados das redes sem fio detectadas no Bloco Didático, iniciou-se a etapa de tratamento dos mesmos, no qual foram analisados e depois utilizados filtros para definir quais dados das redes capturadas seriam aproveitados. Com o auxílio do Xirrus Wi-Fi Inspector, foram selecionadas informações que indicassem a frequência de operação e o canal utilizado pelos pontos de acesso com o objetivo de identificar interferências entre redes dentro da mesma área de cobertura.
 
 A \autoref{fig:networks-didatico} mostra a lista criada no Xirrus Wi-Fi Inspector com as características dos pontos de acessos detectados na varredura no térreo do Bloco Didático. A princípio, ao ser gerada a lista, são exibidos vários parâmetros pertinentes das redes Wi-Fi, tanto os que seriam úteis para o presente trabalho quanto outros não utilizados.
 
@@ -323,7 +323,7 @@ Devido a questões de necessidade e imprevistos, uma nova rede \textit{wireless}
 
 A \autoref{fig:heatmapper-andar2} apresenta visualmente o mapa de calor da rede IFCE\_Teste para o térreo do Bloco Didático, e o maior nível de potência que é recebido é representado por verde e o menor nível de potência recebido é definido pela cor vermelha. Cada pequeno ponto verde interligado a outro por um segmento de reta representa o local onde foi efetuada uma medição de sinal.
 
-\textcolor{blue}{Por algum motivo, provavelmente devido a um erro pontual, o programa Ekahau HeatMapper não exibiu a localização de determinados pontos medidos na região que abrange as duas salas de aula e o corredor do canto superior direito na \autoref{fig:heatmapper-andar2}. No entanto, não houve prejuízos significativos ao resultado final do mapeamento do primeiro andar.}
+Por algum motivo, provavelmente devido a um erro pontual, o programa Ekahau HeatMapper não exibiu a localização de determinados pontos medidos na região que abrange as duas salas de aula e o corredor do canto superior direito na \autoref{fig:heatmapper-andar2}. No entanto, não houve prejuízos significativos ao resultado final do mapeamento do primeiro andar.
 
 \newpage
 \begin{figure}[H]
