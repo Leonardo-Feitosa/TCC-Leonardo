@@ -180,14 +180,20 @@ O ueceTeX2 é fornecido gratuitamente e sem garantias e pode ser redistribuído 
 
 # Agradecimentos
 
-![alt tag](http://www.goes.uece.br/style/images/logo_goes.png)
+Grupo de Otimização em Engenharia de Software (GOES): [http://www.goes.uece.br]
 
-Grupo de Otimização em Engenharia de Software
+- Por Onde Comecar: [https://code.google.com/p/abntex2/wiki/PorOndeComecar]
+- GOES: [http://www.goes.uece.br]
+- abnTeX2: [https://code.google.com/p/abntex2/]
+- MikTeX: [http://miktex.org/download]
+- TeXstudio: [http://texstudio.sourceforge.net/]
 
-[http://www.goes.uece.br]
+# Observações
 
-[Por Onde Comecar]:https://code.google.com/p/abntex2/wiki/PorOndeComecar
-[http://www.goes.uece.br]:http://www.goes.uece.br
-[abnTeX2]:https://code.google.com/p/abntex2/
-[http://miktex.org/download]:http://miktex.org/download
-[http://texstudio.sourceforge.net/]:http://texstudio.sourceforge.net/
+O presente modelo (IFCETeX) é uma distribuição do ueceTeX2 adaptado para o Intituto Federal de Edeucação, Ciência e Tecnologia de Ceará *campus* Tauá (IFCE) e livre para ser livremente modificado e redistribuído. Entretanto, o IFCETeX não está oficialmente vinculada ao IFCE.
+
+**Caso queira contribuir, fique a vontade! :)**
+
+## Contribuidores atuais:
+
+<img src="https://avatars1.githubusercontent.com/u/42175596?s=460&v=4" height="100" width="100"> [https://github.com/Leonardo-Feitosa] 
