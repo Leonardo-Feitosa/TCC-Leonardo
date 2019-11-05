@@ -196,4 +196,4 @@ O presente modelo (IFCETeX) é uma distribuição do ueceTeX2 adaptado para o In
 
 ## Contribuidores atuais:
 
-<img src="https://avatars1.githubusercontent.com/u/42175596?s=460&v=4" height="100" width="100"> [https://github.com/Leonardo-Feitosa] 
+- [Leonardo Feitosa](https://github.com/Leonardo-Feitosa)
